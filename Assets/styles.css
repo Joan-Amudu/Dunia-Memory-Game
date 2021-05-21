@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap');
 
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Assets/images/background.jpg'); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+body,
+html {
+    background: rgb(207, 196, 207, 0.5);
+   
 
 }
 
-.navbar-light .navbar-brand {
-    color: #b3816e;
+.nav-bar {
+    color: rgb(207, 196, 207, 0.5);
     font-size: 150%;
 }
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    padding: 5%;
+
+}
+
+
+/*---- Media Queries ----*/
+
