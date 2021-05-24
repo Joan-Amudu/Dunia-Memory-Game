@@ -24,7 +24,7 @@ The deployed site can be found [here](https://joan-amudu.github.io/Dunia-Memory-
 # General Information
 Dunia in Kiswahili means - The World. This memory game will be based on the world map and is inspired by my love for travel.
 
-The game is based on matching a country and it's capital city. The goeal is to have several geographical regions of the world. However this particlular project will be based on europe.
+The game is based on matching a country and it's capital city. The goal is to have several geographical regions of the world. However this particlular project will be based on europe.
 
 Europe is made up of 50 countries. so, at the hard level, all countries will have to be matched with their repective capital cities. At the medium level, only 35 countries will be available and at the easy level, only 15 countries.
 
@@ -33,7 +33,7 @@ The game is supposed to be fun and can be played by everyone.
 the game will be further developed beyond the scope of this project to include other regions: Oceania, Asia, South East Asia, North America, South America and Africa.
 
 # How to Play
-to play, simply wait for the country and capital city to be shown (3 pairs for the easy level) and then match the pairs. 
+To play, simply wait for the country and capital city to be shown (3 pairs for the easy level) and then match the pairs. 
 
 Any correct matches will score a point. Wrong matches will also be recorded.
 

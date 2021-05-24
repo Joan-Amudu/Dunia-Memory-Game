@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap');
 
-body,
-html {
-    background: rgb(207, 196, 207, 0.5);
-   
+body {
+    background: url(/Assets/images/world.svg) no-repeat center center fixed;
+    background-size: contain;
+    overflow: hidden;
+    height: 100vh;
+    
 
 }
 
@@ -12,7 +14,14 @@ html {
     font-size: 150%;
 }
 
+.dropdown-menu {
+    border-radius: 1px solid;
+    color: red;
+}
 
+.modal-body {
+    color: #00207f;
+}
 
 .footer {
     position: fixed;
@@ -28,3 +37,42 @@ footer a {
 
 /*---- Media Queries ----*/
 
+
+/*
+#8a090e
+#615420
+#f16832
+#fab37b
+#a19565
+*/
+
+
+
+/*
+#0d4930
+#671873
+#a50332
+#c84b15
+#4fa38c
+rgb(0, 32, 127, 1)
+
+
+h5 {
+    font-size: 390%;
+background: linear-gradient(
+    99deg,
+ 
+
+}
+*/
+
+h5 {
+    font-size: 200%;
+    background: linear-gradient( 
+90deg,
+rgb(254, 199, 99, 1) 20%,
+rgb(234, 85, 177, 1) 54%,
+rgb(169, 146, 250, 1) 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
