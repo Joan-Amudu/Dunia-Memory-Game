@@ -5,8 +5,6 @@ body {
     background-size: contain;
     overflow: hidden;
     height: 100vh;
-    
-
 }
 
 .nav-bar {
@@ -22,6 +20,41 @@ body {
 .modal-body {
     color: #00207f;
 }
+
+.memory-tiles{
+    width: 640px;
+    height: 640px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    
+}
+
+.memory-card{
+    width: 20%;
+    height: 30%;
+    margin: 10px;
+    position: relative;
+    transform: scale(1);
+
+}
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background: #6e8ff1;
+
+}
+
+
 
 .footer {
     position: fixed;
@@ -75,4 +108,15 @@ rgb(234, 85, 177, 1) 54%,
 rgb(169, 146, 250, 1) 100% );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.europe-countries {
+    background: linear-gradient( 
+90deg,
+rgb(254, 199, 99, 1) 20%,
+rgb(234, 85, 177, 1) 54%,
+rgb(169, 146, 250, 1) 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
 }
