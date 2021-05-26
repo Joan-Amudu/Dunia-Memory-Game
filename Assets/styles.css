@@ -1,44 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap');
 
+html {
+    height: 100vh;
+}
 body {
-    background: url(/Assets/images/world.svg) no-repeat center center fixed;
+    background-color: #00143f;
     background-size: contain;
     overflow: hidden;
     height: 100vh;
 }
 
-.nav-bar {
-    color: rgb(207, 196, 207, 0.5);
+h5 {
+    color: #00207f;
     font-size: 150%;
+}
+   
+
+.navbar-light .navbar-brand {
+    color: #ffbb39;
+    font-size: 200%;
+}
+
+
+ a:hover {
+    color: #ffbb39;
+}
+
+li .nav-item {
+    color: #ffbb39;
 }
 
 .dropdown-menu {
     border-radius: 1px solid;
     color: red;
 }
+.modal-content {
+    background: #fb6500;
+}
 
 .modal-body {
     color: #00207f;
 }
 
-.memory-tiles{
-    width: 640px;
-    height: 640px;
+.memory-card {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+    overflow: hidden;
+}
+
+
+.scoreboard{
+    grid-column: 1 / -1;
+    color: #ffbb39;
+    font-size: 2em;
+    text-align: center;
+}
+
+.flag-card{
+    width: 125px;
+    height: 175px;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
-    
-}
-
-.memory-card{
-    width: 20%;
-    height: 30%;
     margin: 10px;
+    border-radius: 5px;
     position: relative;
     transform: scale(1);
-
+    background: #fb6500;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
 }
-.memory-card:active {
+
+img {
+    height: 175px;
+    width: 125px;
+}
+
+.flag-card:hover .back-face {
+    transform: rotateY(-180deg);
+}
+
+.flag-card:hover .front-face {
+    transform: rotateY(0);
+}
+
+.flag-card:active {
     transform: scale(.97);
     transition: transform .2s;
 }
@@ -46,14 +96,22 @@ body {
 .front-face,
 .back-face {
     position: absolute;
-    height: 100%;
-    width: 100%;
     padding: 20px;
     border-radius: 5px;
-    background: #6e8ff1;
+    height: 175px;
+    width: 125px;
+    overflow: hidden;
+}
+
+
+.back-face {
+   
 
 }
 
+.front-face {
+    transform: rotateY(180deg);
+}
 
 
 .footer {
@@ -99,24 +157,4 @@ background: linear-gradient(
 }
 */
 
-h5 {
-    font-size: 200%;
-    background: linear-gradient( 
-90deg,
-rgb(254, 199, 99, 1) 20%,
-rgb(234, 85, 177, 1) 54%,
-rgb(169, 146, 250, 1) 100% );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-.europe-countries {
-    background: linear-gradient( 
-90deg,
-rgb(254, 199, 99, 1) 20%,
-rgb(234, 85, 177, 1) 54%,
-rgb(169, 146, 250, 1) 100% );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: -1;
-}
