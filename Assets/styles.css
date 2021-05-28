@@ -3,6 +3,7 @@
 html {
     height: 100vh;
 }
+
 body {
     background-color: #00143f;
     background-size: contain;
@@ -15,14 +16,12 @@ h5 {
     font-size: 150%;
 }
    
-
 .navbar-light .navbar-brand {
     color: #ffbb39;
     font-size: 200%;
 }
 
-
- a:hover {
+a:hover {
     color: #ffbb39;
 }
 
@@ -42,7 +41,12 @@ li .nav-item {
     color: #00207f;
 }
 
-.memory-card {
+.game-container {
+    
+ 
+}
+
+.easy {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
@@ -52,6 +56,25 @@ li .nav-item {
     overflow: hidden;
 }
 
+.medium {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+    overflow: hidden;
+}
+
+.hard {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+    overflow: hidden;
+}
 
 .scoreboard{
     grid-column: 1 / -1;
@@ -61,8 +84,8 @@ li .nav-item {
 }
 
 .flag-card{
-    width: 125px;
-    height: 175px;
+    width: 85px;
+    height: 125px;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -70,47 +93,25 @@ li .nav-item {
     border-radius: 5px;
     position: relative;
     transform: scale(1);
-    background: #fb6500;
     overflow: hidden;
+    backface-visibility: hidden;
     transition: transform 500ms ease-in-out;
 }
 
 img {
-    height: 175px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
 }
 
-.flag-card:hover .back-face {
-    transform: rotateY(-180deg);
-}
 
-.flag-card:hover .front-face {
-    transform: rotateY(0);
-}
-
-.flag-card:active {
-    transform: scale(.97);
-    transition: transform .2s;
-}
 
 .front-face,
 .back-face {
     position: absolute;
-    padding: 20px;
-    border-radius: 5px;
-    height: 175px;
-    width: 125px;
+    border: 5px solid #fb6500;;
+    height: 125px;
+    width: 85px;
     overflow: hidden;
-}
-
-
-.back-face {
-   
-
-}
-
-.front-face {
-    transform: rotateY(180deg);
 }
 
 
@@ -158,3 +159,16 @@ background: linear-gradient(
 */
 
 
+/*----- Media Querries -----*/
+
+@media (max-width: 600px) {
+    .easy {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .medium,
+    .hard {
+        grid-template-columns: repeat(3, auto);
+    }
+    
+}
