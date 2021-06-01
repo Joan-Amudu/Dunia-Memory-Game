@@ -1,90 +1,527 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-      <link rel="stylesheet" href="Assets/styles.css">
-      <script src="script.js" async></script>
-      <title>Document</title>
-  </head>
-  <body>
-      <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">DUNIA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-               </ul>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="Assets/styles.css">
+        <script src="script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">DUNIA</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Play</a>
+                  </li>                
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
         </nav>
+        <!--Game container that will hold the scores, time, sound and volume controls and all 50 pair images (creating 100 cards in total)-->
+        <div class="gameContainer">
+          <!--Score Board-->
+          <div class="scoreboard">
+            <div class="score">
 
-    <div class="controls text-center p-3">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-  About
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title w-100 text-center" id="staticBackdropLabel">About</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Dunia in Kiswahili means - The World. This memory game will be based on the world map and is inspired by my love for travel.
-              The game is based on matching a country and it's capital city. The goal is to have several geographical regions of the world. However this particlular project will be based on europe.
-              Europe is made up of 50 countries. so, at the hard level, all countries will have to be matched with their repective capital cities. At the medium level, only 35 countries will be available and at the easy level, only 15 countries.
-              The game is supposed to be fun and can be played by everyone. 
-              the game will be further developed beyond the scope of this project to include other regions: Oceania, Asia, South East Asia, North America, South America and Africa.
-      </div>
-      <h5 class="modal-title w-100 text-center" id="staticBackdropLabel">How To Play</h5>
-            <hr>
-            <div class="modal-body">
-              To play, simply wait for the country and capital city to be shown (3 pairs for the easy level) and then match the pairs. 
-  	          Any correct matches will score a point. Wrong matches will also be recorded.
             </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+            <div class="time">
 
-<div class="levels text-center p-3">
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Play
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="easy.html">Easy</a>
-        <hr>
-        <a class="dropdown-item" href="medium.html">Medium</a>
-        <hr>
-        <a class="dropdown-item" href="hard.html">Hard</a>
-      </div>
-    </div>
-  </div>
+            </div>
+          <!--Sound Controls-->
+          </div>
+          <div class="soundControls">
+            <div class="mute">
 
-     
+            </div>
+            <div class="volume">
+
+            </div>
+          <!--Images-->
+          <div class="card">
+            <!--Albania-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Andorra-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Armenia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Austria-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Azerbaijan-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Belarus-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Belgium-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Bosnia and Herzegovina-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Bulgaria-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Croatia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Cyprus-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Czech Republic-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Denmark-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Estonia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Finland-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--France-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Georgia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Germany-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Greece-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Hungary-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Iceland-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Ireland-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Italy-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Kazakhstan-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Kosovo-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Latvia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Leichtenstein-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Lithuania-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Luxembourg-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Malta-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Moldova-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Monaco-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Montenegro-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--The Netherlands-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--North Macedonia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Norway-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Poland-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Portugal-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Romania-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Russia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--San Marino-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Serbia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Slovakia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Slovenia-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Spain-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Sweden-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Switzerland-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Turkey-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Ukraine-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--United Kingdom-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <!--Vatican City-->
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>
+            <div class="flag-card">        
+              <img class="back-face" src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+              <img class="front-face" src="Assets/images/yellow.jpg" alt="yellow-background">
+            </div>        
+            
+        </div>
+      </div>
+
+    
+
+
+
+
+
+
       
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  </body>
-  </html>
+    </body> 
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+    </html>
