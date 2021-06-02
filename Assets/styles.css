@@ -1,8 +1,46 @@
-img {
-    height: 125px;
-    width: 85px;
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display&display=swap');
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+   
+    justify-content: center;
+    perspective: 500px;
+    overflow: hidden;
+   
 }
 
-h1 {
-    font-size: 0.5rem;
+.flag-card {
+    width: 85px;
+    height: 125px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(1);
+    overflow: hidden;
+ }
+
+ .front-face {
+    position: absolute;
+   
+    height: 125px;
+    width: 85px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+.back-face {
+    position: absolute;
+ 
+    height: 125px;
+    width: 85px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    
 }

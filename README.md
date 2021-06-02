@@ -174,6 +174,13 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 # Credits
 Below are the resources that were used to create this website.
+## Code
+
+## Images
+Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
+
+
+## Inspirations
 
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/), a popular front-end open source toolkit has been used for the columns, rows, buttons and form.
 * [Font Awesome](https://fontawesome.com/) was used for the social media icons. Here, the free icons were selected and styled to match the overall color-scheme of the website. 
