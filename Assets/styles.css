@@ -1,46 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display&display=swap');
 
 
-.card {
+.gameboard {
+   
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+}
+
+.gameContainer {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
-   
+    grid-gap: 10px;   
     justify-content: center;
-    perspective: 500px;
-    overflow: hidden;
+    perspective: 600px;
+    overflow: hidden;  
    
 }
 
-.flag-card {
+
+/* The flip card container with perspective to create 3D effect */
+.flip-card {
+    background-color: transparent;
     width: 85px;
     height: 125px;
+    margin: 5px;
     display: flex;
-    margin: auto;
     flex-wrap: wrap;
-    margin: 10px;
-    border-radius: 5px;
-    position: relative;
-    transform: scale(1);
-    overflow: hidden;
- }
-
- .front-face {
-    position: absolute;
-   
-    height: 125px;
-    width: 85px;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-}
-.back-face {
-    position: absolute;
- 
-    height: 125px;
-    width: 85px;
-    overflow: hidden;
-    backface-visibility: hidden;
     
+    perspective: 1000px;
+    transform: scale(1);
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 85px;
+    height: 125px;    
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;    
+  }
+  
+  /* Card Flip when active */
+
+
+  .flip-card:active .flip-card-inner {
+    transform: scale(0.97);
+    transition: transform .2s;
+    transform: rotateY(-180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 85px;
+    height: 125px;
+    border-radius: 5px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    color: white;
+    
+  }
+
+  .flip-card img {
+    width: 85px;
+    height: 125px;
+    border-radius: 5px;
+    border: 1px solid #fb6500;
+  }
+
+
+  /*----- Media Querries -----*/
+
+@media (max-width: 600px) {
+    .gameContainer {
+        grid-template-columns: repeat(3, auto);
+    }
+
 }
