@@ -3,7 +3,7 @@ class SoundControls{
     constructor() {
         this.flipSound = new Audio('Assets/sounds/flipsound.wav');
     }
-    audio() {
+    startMusic() {
         this.flipSound.play();
     }
 }
@@ -28,8 +28,8 @@ class cardGame {
     }
 
     flipCard(card){
-        if(this.cardFlipped(card)) {
-        this.SoundControls.audio()
+        if(this.canFlipCard(card)) {
+        soundControls.startMusic()
         }
 
     }
