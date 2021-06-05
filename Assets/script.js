@@ -1,46 +1,72 @@
 
 class SoundControls{
     constructor() {
-        this.flipSound = new Sound('assets/sounds/flipsound.wav');
+        this.flipSound = new Audio('Assets/sounds/flipsound.wav');
     }
-    flip() {
+    audio() {
         this.flipSound.play();
     }
 }
 class cardGame {
-    constructor(cardArray) {
-        this.cards = cardArray
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timeRemaining = totalTime;
+
         this.scores = document.getElementsByClassName('score');
-        this.timer = document.getElementsByClassName('time')
+        this.timer = document.getElementsByClassName('time');
     }
-    playGame() {
+
+    startGame() {
         this.cardsToCheck = null;
+        this.totalClicks = 0;
+        this.timeRemaining = this.totalTime;
         this.matchCards = [];
         this.busy = true;
+
+        this.cardShuffle();
     }
 
     flipCard(card){
         if(this.cardFlipped(card)) {
-            this.sound.flipsound();
+        this.SoundControls.audio()
         }
 
     }
+ 
+    cardShuffle() {
+        for(let i = this.cardsArray.length - 1; i > 0; i--) {
+            let randIndex = Math.floor(Math.random() * (i+1));
+            this.cardsArray[randIndex].style.order = i;
+            this.cardsArray[i].style.order = randIndex;
 
-    cardFlipped(card) {
+        }
+    }
+
+    canFlipCard(card) {
         return true;
         //return !this.busy && !this.matchCards.includes(card) && card !== this.cardsToCheck;
     }
 }
 
 function ready() {
-    let cardArray = Array.from(document.getElementsByClassName('flip-card-inner'));
-    let game = new cardGame(cardArray);
-    cardArray.forEach(card => {
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let cards = Array.from(document.getElementsByClassName('flip-card-inner'));
+    let game = new cardGame(100, cards);
+
+    overlays.forEach(overlay =>{
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('visible');
+            game.startGame();
+        });
+    });
+
+    cards.forEach(card => {
         card.addEventListener('click',() => {
             game.flipCard(card);
 
-        })
-    })
+        });
+    });
 }
 
 
