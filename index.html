@@ -1,1133 +1,316 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <!--Meta-->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Bootstrap v 4.6-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <!--CSS File-->
-        <link rel="stylesheet" href="Assets/styles.css">
-        <!--Tile-->
-        <title>Dunia Memory Card Game</title>
-    </head>
-    <body>
-      
-        <nav id="navItem"class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">DUNIA</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Play</a>
-                  </li>                
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-        <!--Game container that will hold the scores, time, sound and volume controls and all 50 pair images (creating 100 cards in total)-->
-        <div class="gameContainer">
-          <!--Game Board-->
-          <div class="gameboard">
-            <div class="score"> Score:</div>
-            <div class="time">Timer:</div>
-          <!--Sound Controls-->
-           
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-          </div>
-          </div>
-          <!--Images-->
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <!--Meta-->
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!--Bootstrap v 4.6-->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+          <!--CSS File-->
+          <link rel="stylesheet" href="Assets/styles.css">
+          <!--JavaScript File with async to enable the browers to load the JavaScript file at the same time with the HTML file-->
+          <script src="Assets/script.js" async></script>
+          <!--Tile-->
+          <title>Dunia Memory Card Game</title>
+      </head>
+      <body>
         
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+          <nav id="navItem"class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">DUNIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Play</a>
+                    </li>                
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="flip-card-back">
-                <img src="Assets/images/backface.jpg" alt="Feathered Background">
-              </div>
+          </nav>
+          <!--Game container that will hold the scores, time, sound and volume controls and all 50 pair images (creating 100 cards in total)-->
+          <div class="gameContainer">
+            <!--Game Board-->
+            <div class="gameboard">
+              <div class="score"> Score:</div>
+              <div class="time">Timer:</div>
+            <!--Sound Controls-->
+            
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
             </div>
-          </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
-              </div>
-              <div class="flip-card-back">
-                <img src="Assets/images/backface.jpg" alt="Feathered Background">
-              </div>
             </div>
-          </div>         
-          
 
+            <!--Front and back Images of cards-->
+            
+            <!--Albania-->          
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+                </div>
+                <div class="flip-card-back">
+                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="/Assets/images/flags/Albania.svg.png" alt="Albania-flag">
+                </div>
+                <div class="flip-card-back">
+                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                </div>
+              </div>
+            </div>   
+            
             <!--Andorra-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Andorra.svg.png" alt="Andorra-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Andorra.svg.png" alt="Andorra-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Armenia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Armenia.svg.png" alt="Armenia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Armenia.svg.png" alt="Armenia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Austria-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Austria.svg.png" alt="Austria-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Austria.svg.png" alt="Austria-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Azerbaijan-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Azerbaijan.svg" alt="Azerbaijan-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Azerbaijan.svg" alt="Azerbaijan-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Belarus-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Belarus.svg.png" alt="Belarus-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Belarus.svg.png" alt="Belarus-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Belgium-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Belgium.svg.png" alt="Belgium-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Belgium.svg.png" alt="Belgium-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Bosnia and Herzegovina-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Bosnia_and_Herzegovina.svg.png" alt="Bosnia_and_Herzegovina-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Bosnia_and_Herzegovina.svg.png" alt="Bosnia_and_Herzegovina-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Bulgaria-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Bulgaria.svg.png" alt="Bulgaria-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Bulgaria.svg.png" alt="Bulgaria-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Croatia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Croatia.svg.png" alt="Croatia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Croatia.svg.png" alt="Croatia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Cyprus-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Cyprus.svg.png" alt="Cyprus-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Cyprus.svg.png" alt="Cyprus-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Czech Republic-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Czech_Republic.svg.webp" alt="Czech_Republic-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Czech_Republic.svg.webp" alt="Czech_Republic-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Denmark-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Denmark.svg" alt="Denmark-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Denmark.svg" alt="Denmark-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Estonia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Estonia.svg.png" alt="Estonia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Estonia.svg.png" alt="Estonia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Finland-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Finland.svg.png" alt="Finland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Finland.svg.png" alt="Finland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--France-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/France.svg.png" alt="France-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/France.svg.png" alt="France-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Georgia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Georgia.svg.png" alt="Georgia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Georgia.svg.png" alt="Georgia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Germany-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Germany.svg.png" alt="Germany-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Germany.svg.png" alt="Germany-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Greece-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Greece.svg" alt="Greece-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Greece.svg" alt="Greece-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Hungary-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Hungary.svg" alt="Hungary-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Hungary.svg" alt="Hungary-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Iceland-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Iceland.svg.png" alt="Iceland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Iceland.svg.png" alt="Iceland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Ireland-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Ireland.svg.png" alt="Ireland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Ireland.svg.png" alt="Ireland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Italy-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Italy.svg.png" alt="Italy-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Italy.svg.png" alt="Italy-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Kazakhstan-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Kazakhstan.svg.png" alt="Kazakhstan-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Kazakhstan.svg.png" alt="Kazakhstan-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Kosovo-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Kosovo.svg.png" alt="Kosovo-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Kosovo.svg.png" alt="Kosovo-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Latvia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Latvia.svg.png" alt="Latvia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Latvia.svg.png" alt="Latvia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Leichtenstein-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Liechtenstein.svg.png" alt="Leichtenstein-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Liechtenstein.svg.png" alt="Leichtenstein-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Lithuania-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Lithuania.svg.png" alt="Albania-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Lithuania.svg.png" alt="Albania-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Luxembourg-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Luxembourg.svg.png" alt="Luxembourg-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Luxembourg.svg.png" alt="Luxembourg-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Malta-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Malta.svg.png" alt="Malta-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Malta.svg.png" alt="Malta-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Moldova-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Moldova.svg.png" alt="Moldova-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Moldova.svg.png" alt="Moldova-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Monaco-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Monaco.svg.png" alt="Monaco-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Monaco.svg.png" alt="Monaco-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Montenegro-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Montenegro.svg" alt="Montenegro-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Montenegro.svg" alt="Montenegro-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--The Netherlands-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Netherlands.svg.webp" alt="Netherlands-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Netherlands.svg.webp" alt="Netherlands-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--North Macedonia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/North_Macedonia.svg.png" alt="North_Macedonia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/North_Macedonia.svg.png" alt="North_Macedonia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Norway-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Norway.svg" alt="Norway-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Norway.svg" alt="Norway-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Poland-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Poland.svg.png" alt="Poland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Poland.svg.png" alt="Poland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Portugal-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Portugal.svg" alt="Portugal-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Portugal.svg" alt="Portugal-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Romania-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Romania.svg" alt="Romania-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Romania.svg" alt="Romania-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Russia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Russia.svg.webp" alt="Russia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Russia.svg.webp" alt="Russia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--San Marino-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/San_Marino.svg.png" alt="San_Marino-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/San_Marino.svg.png" alt="San_Marino-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Serbia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Serbia.svg.png" alt="Serbia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Serbia.svg.png" alt="Serbia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Slovakia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Slovakia.svg" alt="Slovakia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Slovakia.svg" alt="Slovakia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Slovenia-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Slovenia.svg.png" alt="Slovenia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Slovenia.svg.png" alt="Slovenia-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Spain-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Spain.svg.webp" alt="Spain-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Spain.svg.webp" alt="Spain-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Sweden-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Sweden.svg.png" alt="Sweden-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Sweden.svg.png" alt="Sweden-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Switzerland-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Switzerland.svg.webp" alt="Switzerland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Switzerland.svg.webp" alt="Switzerland-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Turkey-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Turkey.svg.png" alt="Turkey-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Turkey.svg.png" alt="Turkey-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Ukraine-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Ukraine.svg.png" alt="Ukraine-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Ukraine.svg.png" alt="Ukraine-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--United Kingdom-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/United_Kingdom.svg.png" alt="United_Kingdom-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/United_Kingdom.svg.png" alt="United_Kingdom-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <!--Vatican City-->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Vatican_City.svg.webp" alt="Vatican_City-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="/Assets/images/flags/Vatican_City.svg.webp" alt="Vatican_City-flag">
-                </div>
-                <div class="flip-card-back">
-                  <img src="Assets/images/backface.jpg" alt="Feathered Background">
-                </div>
-              </div>
-            </div>    
-        </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Andorra.svg.png" alt="Andorra-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Andorra.svg.png" alt="Andorra-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Armenia-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Armenia.svg.png" alt="Armenia-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Armenia.svg.png" alt="Armenia-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Austria-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Austria.svg.png" alt="Austria-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Austria.svg.png" alt="Austria-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Azerbaijan-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Azerbaijan.svg" alt="Azerbaijan-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Azerbaijan.svg" alt="Azerbaijan-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Belarus-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Belarus.svg.png" alt="Belarus-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Belarus.svg.png" alt="Belarus-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Belgium-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Belgium.svg.png" alt="Belgium-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Belgium.svg.png" alt="Belgium-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Bosnia and Herzegovina-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Bosnia_and_Herzegovina.svg.png" alt="Bosnia_and_Herzegovina-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Bosnia_and_Herzegovina.svg.png" alt="Bosnia_and_Herzegovina-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Bulgaria-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Bulgaria.svg.png" alt="Bulgaria-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Bulgaria.svg.png" alt="Bulgaria-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Croatia-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Croatia.svg.png" alt="Croatia-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Croatia.svg.png" alt="Croatia-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Cyprus-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Cyprus.svg.png" alt="Cyprus-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Cyprus.svg.png" alt="Cyprus-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <!--Czech Republic-->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Czech_Republic.svg.webp" alt="Czech_Republic-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Assets/images/flags/Czech_Republic.svg.webp" alt="Czech_Republic-flag">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="Assets/images/backface.jpg" alt="Feathered Background">
+                  </div>
+                </div>
+              </div>           
+       
       </div>
-    </div>
 
-  </div>
-         
-      <!--JavaScript File-->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-      <script src="Assets/script.js"></script>
-    </body>
-    </html>
+    </div>
+          
+        <!--JavaScript File-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      
+      </body>
+      </html>
