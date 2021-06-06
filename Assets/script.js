@@ -3,7 +3,7 @@ class SoundControls{
     constructor() {
         this.flipSound = new Audio('Assets/sounds/flipsound.wav');
     }
-    startMusic() {
+    flipMusic() {
         this.flipSound.play();
     }
 }
@@ -22,24 +22,25 @@ class cardGame {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.matchCards = [];
-        this.busy = true;
-
+        this.busy = true; 
+        
         this.cardShuffle();
     }
 
     flipCard(card){
         if(this.canFlipCard(card)) {
-        soundControls.startMusic()
+            soundControls.flipMusic();
+            this.totalClicks++;
+            this.scores.innerText = this.totalClicks;
         }
 
     }
  
     cardShuffle() {
         for(let i = this.cardsArray.length - 1; i > 0; i--) {
-            let randIndex = Math.floor(Math.random() * (i+1));
-            this.cardsArray[randIndex].style.order = i;
-            this.cardsArray[i].style.order = randIndex;
-
+            let j = Math.floor(Math.random() * (i+1)); 
+            this.cardsArray[j].style.order = i;
+            this.cardsArray[i].style.order = j;
         }
     }
 
@@ -53,11 +54,12 @@ function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('flip-card-inner'));
     let game = new cardGame(100, cards);
-
+    
     overlays.forEach(overlay =>{
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
             game.startGame();
+            
         });
     });
 

@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display&display=swap');
 
+body {
+  font-family: Mate SC;
+  background-color: #9191BA;
+}
+
+p {
+  font-family: Playfair;
+  font-size: 1.2em;
+
+}
+
+hr {
+  width: 100px;
+  height: 5px;
+  border: 0;
+  background-color: #f2ff2f;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #f2ff2f;
+  border-color: #f2ff2f;
+}
+
+.btn-primary:hover {
+  background-color: #f2ff2f;
+  border-color: #f2ff2f;
+}
+/*-Navbar*/
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: #f2ff2f;
+  font-size: 3em;
+}
+
+.navbar-nav .nav-link {
+  color: #f2ff2f;
+  font-size: 1.5em;
+}
 
 .gameboard {
    
@@ -26,8 +66,7 @@
     height: 125px;
     margin: 5px;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
     perspective: 1000px;
     transform: scale(1);
   }
@@ -81,6 +120,27 @@
     border: 1px solid #fb6500;
   }
 
+
+  /*----- About Page -----*/
+.About,
+.play {
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+ }
+
+ form {
+  justify-content: center;
+  padding: 30px;
+  margin: 20px;
+}
+
+.contact-label {
+  font-size: 1.2em;
+}
+
+/*-----------Overlay Text --------------*/
+
   .overlay-text {
     display: none;
     position: fixed;
@@ -91,7 +151,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color: red;
+    color: #f2ff2f;
   }
 
   .overlay-text-small {
@@ -115,11 +175,39 @@
     }
   }
 
+
+/*---------Footer------*/
+ footer a {
+ 
+    background-color: transparent;
+    color: #f2ff2f;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+footer a:hover {
+  color: #f2ff2f;
+
+}
+
   /*----- Media Querries -----*/
 
 @media (max-width: 600px) {
     .gameContainer {
         grid-template-columns: repeat(3, auto);
+    }
+/*------ Form --------*/
+    .col-sm {
+      padding: 5px;
+      margin: 10px;      
+    }
+
+    .contact-label {
+      justify-content: center;
+    }
+
+    button {
+      justify-content: center;
     }
 
 }
