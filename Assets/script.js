@@ -1,103 +1,91 @@
+document.addEventListener('DOMContentLoaded', () => {
+      // array of cards
+const cardArray = [
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+]
 
-class SoundControls{
-    constructor() {
-        this.flipSound = new Audio('Assets/sounds/flipsound.wav');
-    }
-    flipMusic() {
-        this.flipSound.play();
-    }
-}
-class cardGame {
-    constructor(totalTime, cards) {
-        this.cardsArray = cards;
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
+  // randomise the cards array
 
-        this.scores = document.getElementsByClassName('score');
-        this.timer = document.getElementsByClassName('time');
-    }
+  cardArray.sort(() => 0.5 - Math.random())
 
-    startGame() {
-        this.cardsToCheck = null;
-        this.totalClicks = 0;
-        this.timeRemaining = this.totalTime;
-        this.matchCards = [];
-        this.busy = true; 
-        
-        this.cardShuffle();
-    }
+  // creating  game board
 
-    flipCard(card){
-        if(this.canFlipCard(card)) {
-            soundControls.flipMusic();
-            this.totalClicks++;
-            this.scores.innerText = this.totalClicks;
-        }
+  const grid = document.querySelector('.grid')
+  const resultDisplay = document.querySelector('#result')
+  var cardsChosen = []
+  var cardsChosenId = []
+  var cardsWon = []
 
-    }
- 
-    cardShuffle() {
-        for(let i = this.cardsArray.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i+1)); 
-            this.cardsArray[j].style.order = i;
-            this.cardsArray[i].style.order = j;
-        }
-    }
+  function createBoard() {
+      for (let i = 0; i < cardArray.length; i++)  {
+          var card = document.createElement('img')
+          card.setAttribute('src', 'Assets/images/backface.jpg')
+          card.setAttribute('data-id', i)
+          card.addEventListener('click', flipCard)
+          grid.appendChild(card)
+      }
+  }
 
-    canFlipCard(card) {
-        return true;
-        //return !this.busy && !this.matchCards.includes(card) && card !== this.cardsToCheck;
-    }
-}
-
-function ready() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(document.getElementsByClassName('flip-card-inner'));
-    let game = new cardGame(100, cards);
-    
-    overlays.forEach(overlay =>{
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
-            game.startGame();
-            
-        });
-    });
-
-    cards.forEach(card => {
-        card.addEventListener('click',() => {
-            game.flipCard(card);
-
-        });
-    });
-}
-
-
-
-//Flipping cards
-
-//const cards = document.querySelectorAll('.flip-card-inner');
-//function flipCard() {
-//   this.classList.toggle('flip');  
-//}
-
-// random 
-
-// start Game
-
-// matching cards
+  // check for match
+  function checkForMatch() {
+      var cards = document.querySelectorAll('img')
+      const optionOneId = cardsChosenId[0]
+      const optionTwoId = cardsChosenId[1]
+      if (cardsChosen[0] === cardsChosen[1]) {
+          alert ('You found a match')
+          cards[optionOneId].setAttribute('src', 'Assets/images/background.jpg')
+          cards[optionTwoId].setAttribute('src', 'Assets/images/background.jpg')
+          cardsWon.push(cardsChosen)
+      } else {
+          cards[optionOneId].setAttribute('src', 'Assets/images/background.jpg')
+          cards[optionTwoId].setAttribute('src', 'Assets/images/background.jpg')
+          alert('sorry, try again')
+      }
+      cardsChosen = []
+      cardsChosenId = []
+      resultDisplay.textContent = cardsWon.length
+      if (cardsWon.length === cardArray.length/2) {
+          resultDisplay.textContent = 'Congrats'
+      }
+  }
 
 
-// end game
+  // flip card
 
-// display results
+  function flipCard() {
+      var cardId = this.getAttribute('data-id')
+      cardsChosen.push(cardArray[cardId].name)
+      cardsChosenId.push(cardId)
+      this.setAttribute('src', cardArray[cardId].img)
+      if (cardsChosen.length === 2) {
+          setTimeout(checkForMatch, 500)
+      }
 
-//cards.forEach((card) => card.addEventListener('click', flipCard));
+  }
 
+  createBoard()
 
-if(document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready());
-} else {
-    ready();
-}
-
-let soundControls = new SoundControls();
+})
