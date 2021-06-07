@@ -46,12 +46,14 @@ hr {
   flex-wrap: wrap;
   width: 800px;
   height: 600px;
+  justify-content: center;
+  margin: auto;
 
 }
 
-/*
+
 .grid > div {
-  background: url(assets/images/yellow.jpg) no-repeat;
+  
   border: orange 1px solid;
   width: 71px;
   height: 91px;
@@ -61,8 +63,8 @@ hr {
   font-size: 64px;
   cursor: pointer;
   text-align: left;
-
-}*/
+  
+}
 
 img {
   height: 125px;
@@ -87,6 +89,57 @@ img {
 
 .contact-label {
   font-size: 1.2em;
+}
+
+/*-----------start Text --------------*/
+
+.start-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #f2ff2f;
+}
+
+.start-text-small {
+  font-size: .3em;
+}
+
+.start-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: start-grow 500ms forwards;
+}
+
+@keyframes start-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 10em;
+  }
+}
+
+
+/*---------Footer------*/
+footer a {
+ 
+  background-color: transparent;
+  color: #f2ff2f;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+footer a:hover {
+color: #f2ff2f;
+
 }
 
 

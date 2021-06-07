@@ -3,28 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArray = [
     {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
     {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
-    {name: 'Albania', img:'Assets/images/flags/Albania.svg.png'},
+    {name: 'Andorra', img:'Assets/images/flags/Andorra.svg.png'},
+    {name: 'Andorra', img:'Assets/images/flags/Andorra.svg.png'},
+    {name: 'Armenia', img:'Assets/images/flags/Armenia.svg.png'},
+    {name: 'Armenia', img:'Assets/images/flags/Armenia.svg.png'},
+    {name: 'Austria', img:'Assets/images/flags/Austria.svg.png'},
+    {name: 'Austria', img:'Assets/images/flags/Austria.svg.png'},
+    {name: 'Ireland', img:'Assets/images/flags/Ireland.svg.png'},
+    {name: 'Ireland', img:'Assets/images/flags/Ireland.svg.png'},
+    {name: 'Belarus', img:'Assets/images/flags/Belarus.svg.png'},
+    {name: 'Belarus', img:'Assets/images/flags/Belarus.svg.png'},
+    {name: 'Bulgaira', img:'Assets/images/flags/Bulgaria.svg.png'},
+    {name: 'Bulgaria', img:'Assets/images/flags/Bulgaria.svg.png'},
+    {name: 'Croatia', img:'Assets/images/flags/Croatia.svg.png'},
+    {name: 'Croatia', img:'Assets/images/flags/Croatia.svg.png'},
+    {name: 'Cyprus', img:'Assets/images/flags/Cyprus.svg.png'},
+    {name: 'Cyprus', img:'Assets/images/flags/Cyprus.svg.png'},
+    {name: 'France', img:'Assets/images/flags/France.svg.png'},
+    {name: 'France', img:'Assets/images/flags/France.svg.png'},
+    {name: 'Estonia', img:'Assets/images/flags/Estonia.svg.png'},
+    {name: 'Estonia', img:'Assets/images/flags/Estonia.svg.png'},
+    {name: 'Finland', img:'Assets/images/flags/Finland.svg.png'},
+    {name: 'Finland', img:'Assets/images/flags/Finland.svg.png'},
 ]
 
   // randomise the cards array
@@ -39,7 +39,19 @@ const cardArray = [
   var cardsChosenId = []
   var cardsWon = []
 
-  function createBoard() {
+
+
+  function gameBoard() {
+   
+        let startText = Array.from(document.getElementsByClassName('start-text'));
+               
+        startText.forEach(start =>{
+            start.addEventListener('click', () => {
+                start.classList.remove('visible');
+                               
+            });
+        });
+     
       for (let i = 0; i < cardArray.length; i++)  {
           var card = document.createElement('img')
           card.setAttribute('src', 'Assets/images/backface.jpg')
@@ -56,13 +68,12 @@ const cardArray = [
       const optionTwoId = cardsChosenId[1]
       if (cardsChosen[0] === cardsChosen[1]) {
           alert ('You found a match')
-          cards[optionOneId].setAttribute('src', 'Assets/images/background.jpg')
-          cards[optionTwoId].setAttribute('src', 'Assets/images/background.jpg')
+
           cardsWon.push(cardsChosen)
       } else {
-          cards[optionOneId].setAttribute('src', 'Assets/images/background.jpg')
-          cards[optionTwoId].setAttribute('src', 'Assets/images/background.jpg')
-          alert('sorry, try again')
+          cards[optionOneId].setAttribute('src', 'Assets/images/backface.jpg')
+          cards[optionTwoId].setAttribute('src', 'Assets/images/backface.jpg')
+          //alert('sorry, try again')
       }
       cardsChosen = []
       cardsChosenId = []
@@ -86,6 +97,6 @@ const cardArray = [
 
   }
 
-  createBoard()
+  gameBoard()
 
 })
