@@ -176,6 +176,30 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 Below are the resources that were used to create this website.
 ## Code
 
+[stack over flow](https://stackoverflow.com/questions/31307146/javascript-button-stop-all-audio-on-page) for controlling music with button
+original code:
+
+var audioMap = new Map();
+var rappers = document.querySelectorAll('.rapper');
+rappers.forEach(function(rapper){
+    audioMap.set(rapper, new Audio());
+    rapper.addEventListener('click', function(){
+        var audio = new Audio($(this).data('audio'));
+        audio.play();
+        audioMap.set(this, audio);
+        var current = audioMap.get(this);
+        // console.log('get', current);
+        audioMap.forEach(function(audio){
+            if( audio != current ){
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+    });
+});
+
+still issues with starting and stopping musing using button.
+
 ## Images
 Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
 
