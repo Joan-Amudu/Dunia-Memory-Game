@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <!--CSS File-->
   <link rel="stylesheet" href="Assets/styles.css">
-  <!--JavaScript File with async to enable the browers to load the JavaScript file at the same time with the HTML file-->
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/b22084529e.js" crossorigin="anonymous"></script>
+  <!--JavaScript File-->
   <script src="Assets/script.js"></script>
   <!--Tile-->
   <title>Dunia Memory Card Game</title>
@@ -19,62 +21,72 @@
   <nav id="navItem"class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">DUNIA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Play</a>
-          </li>                
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <a class="btn btn-primary" href="index.html">Play</a>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">About</button>   
+    </div>   
   </nav>
   <!--Overlay Text will be displayed to start game, when user has won and gameover when the time runs out-->
   <div class="start-text visible">Click to Start</div>
-  <div id="game-over-text" class="start-text">Game Over! <span class="start-text-small">Click to Restart.</span> </div>
-  <div id="victory-text" class="start-text">Victory! <span class="start-text-small">Click to Restart.</span> </div>
+  <div id="victory-text" class="start-text">You Won! <span class="start-text-small">Click to Restart.</span></div>
             
   <!--ScoreBoard will display scores and time-->
   <div class="scoreBoard">
-    <h3>Time: <span id="countTimer"></span></h3> 
-    <h3>Score: <span id="result"></span></h3>  
+    <h4>Time: <span id="countTimer"></span></h4> 
+    <h4>Score: <span id="result"></span></h4> 
+    <!--Sound Controls--> 
+    <button type="button" id="playpausebtn">Play/Pause</button>
+    <button type="button" id="mutebtn">Mute/Unmute</button>    
   </div> 
   <!--Creating a grid for the game board-->  
   <div class="grid"></div>
-  <!--Sound Controls--> 
-  <div class="soundControls">Play Music
-    <button id="button">Play</button>
-  </div>
-  <!--Contact Form-->
-  <form>
-    <div class=" contact row">
-      <div class="contact-label col-sm">
-        <label for="contactDetails" class="form-label">Subscribe for Updates</label>
+
+  <!--About Modal-->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <div class="text-center p-3">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.github.com" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body About">
+          <h2>About Dunia</h2>          
+          <hr>              
+          <p>Dunia in Kiswahili means - The World 
+            Dunia is a memory game that allows the user to match cards based on memeory of where they are positioned on the game board.
+            The cards faces are flags of various European countries.
+            However this particlular project will be based on europe.
+            This game board consists of 12 pairs cards, giving the user 24 cards in total to play with.
+          </p>
+        </div> 
+        <div class="play">
+          <h2>How to Play</h2>
+          <hr>
+          <p>To play, simply click on a card, to reveal its front face(image of a flag).
+            If two cards are correclty matched, the user will score 1 point.
+            When all cards are matched, the user was won the game and can start playing again.            
+          </p>            
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Subscribe for Updates</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">*We'll never share your email with anyone else.</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
       </div>
-      <div class="col-sm">
-        <input type="text" class="form-control" placeholder="Full Name">
-      </div>
-      <div class="email col-sm">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
-      </div>
-      <div class="button col-sm">   
-        <button type="submit" class="btn btn-primary">Subscribe</button>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
       </div>
     </div>
-  </form>
-  <!--Footer/Social Media Details-->
-  <footer class="footer">          
-    <div class="text-center p-3">
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
-      <a href="https://www.github.com" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-    </div>    
-  </footer>    
+  </div>
+  
   <!--JavaScript File-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

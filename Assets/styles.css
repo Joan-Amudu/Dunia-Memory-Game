@@ -3,6 +3,7 @@
 body {
   font-family: Mate SC;
   background-color: #9191BA;
+  height: 100vh;
 }
 
 p {
@@ -48,7 +49,6 @@ hr {
   height: 600px;
   justify-content: center;
   margin: auto;
-
 }
 .grid > div {  
   border: orange 1px solid;
@@ -128,6 +128,16 @@ img {
   }
 }
 
+/*---------Modal------*/
+
+.text-center a {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+.text-center i {
+    color: #777777
+}
 
 /*---------Footer------*/
 footer {
@@ -135,7 +145,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  text-align: center; 
+  position: fixed;
 }
 footer a {
  
@@ -155,8 +166,47 @@ color: #f2ff2f;
   /*----- Media Querries -----*/
 
 @media (max-width: 600px) {
+
+  h3 {
+    font-size: 1.5em;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .scoreBoard {  
+    margin: 10px;
+    justify-content: space-evenly;
+    display: grid;
+     
+  }
+  img {
+    height: 85px;
+    width: 65px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+/*-----------start Text --------------*/
+
+@keyframes start-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 5em;
+  }
+}
  
 /*------ Form --------*/
+
     .col-sm {
       padding: 5px;
       margin: 10px;      
@@ -170,4 +220,16 @@ color: #f2ff2f;
       justify-content: center;
     }
 
+}
+
+@media (max-width: 1700px) {
+  footer {
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    padding: 20px;
+  }
 }

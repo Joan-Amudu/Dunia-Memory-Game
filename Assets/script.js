@@ -40,64 +40,43 @@ const cardArray = [
   var cardsChosenId = []
   var cardsWon = []
 
-class SoundControls {
-    constructor() {
-        this.backGroundMusic = new Audio('Assets/sounds/BackgroundMusic.mp3');
-        this.cardFlip = new Audio('Assets/sounds/flipsound.wav');
-        this.victorySound = new Audio('Assets/sounds/victorysound.mp3');
-        this.gameOver = new Audio('Assets/sounds/gameover.mp3');
-        this.backGroundMusic.loop = true;
-    }
-   startMusic() {
-       this.backGroundMusic.play();
-   }
-   stopMusic() {
-       this.backGroundMusic.pause();
-       this.backGroundMusic.currentTime = 0;
-   }
-   flip() {
-    this.cardFlip.play();
-   }
-    victory() {
-       this.stopMusic();
-       this.victorySound.play();  
-   }
-   gameOver() {
-       this.stopMusic();
-       this.gameOver.play();
-   }
-   
-}
+ var audio, playbtn, mutebtn;
+ function initAudioPlayer() {
+     audio = new Audio();
+     audio.src = 'Assets/sounds/BackgroundMusic.mp3';
+     audio.loop = true;
+     audio.play();
+     // set onject references
+     playbtn = document.getElementById('playpausebtn');
+     mutebtn = document.getElementById('mutebtn');
+     // Add event handling
+     playbtn.addEventListener('click', playPause);
+     mutebtn.addEventListener('click', mute);
+     // Functions
+     function playPause() {
+         if(audio.paused) {
+             audio.play();
+         } else {
+             audio.pause();
+         }
 
-class memoryGame {
-    constructor(totalTime) {
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
-        this.timer = document.getElementById('#countTimer')
-        this.soundControls = new SoundControls();
+     }
+     function mute() {
+         if(audio.muted) {
+             audio.muted = false;
+         } else {
+             audio.muted = true;
+         }
     }
-    
-    startGame() {
-        this.cardsChosen = null;
-        this.timeRemaining = this.totalTime;
-        this.busy = true;
-    }
-    canFlipCard() {
-        return !this.busy && !this.cardsWon.includes(card) && card !==this.cardsChosen;
-    }
-
-}
-let audioController = new SoundControls();
-function gameBoard() {  
-         
+ }
+  
+function gameBoard() {         
     let startText = Array.from(document.getElementsByClassName('start-text'));               
         startText.forEach(start =>{
             start.addEventListener('click', () => {
-                start.classList.remove('visible');
-                //game.startGame() ;               
-                
-                audioController.startMusic();        
-                                    
+                start.classList.remove('visible');               
+                playPause();                   
+             
             });
 
         });          
@@ -106,13 +85,12 @@ function gameBoard() {
         card.setAttribute('src', 'Assets/images/backface.jpg')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)          
-        grid.appendChild(card)
-        
+        grid.appendChild(card)        
     }      
 }
 
   // check for match
-  function checkForMatch() {
+  function checkForMatch() {   
       var cards = document.querySelectorAll('img')
       const optionOneId = cardsChosenId[0]
       const optionTwoId = cardsChosenId[1]
@@ -128,23 +106,38 @@ function gameBoard() {
       cardsChosenId = []
       results.textContent = cardsWon.length
       if (cardsWon.length === cardArray.length/2) {
-          results.textContent = 'Congrats'
-          audioController.victory();
+          results.textContent = 'You Won!!'
+          //audioController.victory();               
+           
       }
+          
   }
+
+// Timer
+    var elem = $('#countTimer');
+    var count = 0;
+    setInterval(function() {
+      if (count > 60) { // We check if the timer is in seconds or mins
+        var time = ++count; // We get a copy of the time in 'seconds'
+        time = parseInt(time / 60); // We convert it to mins
+        $(elem).text(time + 'm');
+    } else { // Simmilarly we can also add a condition to check hours with s=3600
+        $(elem).text(++count + 's');
+    }
+    }, 1000);
 
   // flip card
   function flipCard() {
-      var cardId = this.getAttribute('data-id')
+       var cardId = this.getAttribute('data-id')
       cardsChosen.push(cardArray[cardId].name)
       cardsChosenId.push(cardId)
       this.setAttribute('src', cardArray[cardId].img)             
       if(cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500)   
-       
-      }
+        setTimeout(checkForMatch, 500)      
+    }
         
   }
   gameBoard()
+  window.addEventListener('load', initAudioPlayer);
 })
 

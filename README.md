@@ -175,6 +175,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 # Credits
 Below are the resources that were used to create this website.
 ## Code
+javascript code and structure inspired by [Ania Kubrow](https://youtu.be/tjyDOHzKN0w) and [Port exe](https://youtu.be/3uuQ3g92oPQ)
+
 
 [stack over flow](https://stackoverflow.com/questions/31307146/javascript-button-stop-all-audio-on-page) for controlling music with button
 original code:
@@ -199,6 +201,20 @@ rappers.forEach(function(rapper){
 });
 
 still issues with starting and stopping musing using button.
+
+for count timer --- [stackover flow](https://stackoverflow.com/questions/43317415/create-a-count-up-timer-in-javascript)
+
+  var elem = $('#countTimer');
+  var count = 0;
+  setInterval(function() {
+  if (count > 60) { // We check if the timer is in seconds or mins
+    var time = ++count; // We get a copy of the time in 'seconds'
+    time = parseInt(time / 60); // We convert it to mins
+    $(elem).text(time + 'm');
+  } else { // Simmilarly we can also add a condition to check hours with s=3600
+    $(elem).text(++count + 's');
+  }
+}, 1000);
 
 ## Images
 Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
