@@ -29,21 +29,21 @@ const cardArray = [
 
   // Using Math.random to shuffle to game board.
 
-  cardArray.sort(() => 0.5 - Math.random())
+  cardArray.sort(() => 0.5 - Math.random());
 
   // creating  the game board
 
-  const grid = document.querySelector('.grid')
-  const results = document.querySelector('#result')
-  //const timer = document.querySelector('#time')   
+  const grid = document.querySelector('.grid');
+  const results = document.querySelector('#result');
   var cardsChosen = []
   var cardsChosenId = []
   var cardsWon = []
 
+// Audio Controls
  var audio, playbtn, mutebtn;
  function initAudioPlayer() {
-     audio = new Audio();
-     audio.src = 'Assets/sounds/BackgroundMusic.mp3';
+     audio = new Audio('Assets/sounds/BackgroundMusic.mp3');
+     victory = new Audio('Assets/sounds/victorysound.mp3');
      audio.loop = true;
      audio.play();
      // set onject references
@@ -95,12 +95,12 @@ function gameBoard() {
       const optionOneId = cardsChosenId[0]
       const optionTwoId = cardsChosenId[1]
       if (cardsChosen[0] === cardsChosen[1]) {
-          alert ('You found a match')
+          alert ('Match found!')
           cardsWon.push(cardsChosen)
       } else {
           cards[optionOneId].setAttribute('src', 'Assets/images/backface.jpg')
           cards[optionTwoId].setAttribute('src', 'Assets/images/backface.jpg')
-          //alert('sorry, try again')
+          
       }
       cardsChosen = []
       cardsChosenId = []

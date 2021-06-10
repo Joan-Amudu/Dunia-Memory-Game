@@ -175,30 +175,12 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 # Credits
 Below are the resources that were used to create this website.
 ## Code
-javascript code and structure inspired by [Ania Kubrow](https://youtu.be/tjyDOHzKN0w) and [Port exe](https://youtu.be/3uuQ3g92oPQ)
+javascript code and structure inspired by [Ania Kubrow.](https://youtu.be/tjyDOHzKN0w) and [Port exe](https://youtu.be/3uuQ3g92oPQ)
 
 
-[stack over flow](https://stackoverflow.com/questions/31307146/javascript-button-stop-all-audio-on-page) for controlling music with button
-original code:
+JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSXzdn_0Gg)
 
-var audioMap = new Map();
-var rappers = document.querySelectorAll('.rapper');
-rappers.forEach(function(rapper){
-    audioMap.set(rapper, new Audio());
-    rapper.addEventListener('click', function(){
-        var audio = new Audio($(this).data('audio'));
-        audio.play();
-        audioMap.set(this, audio);
-        var current = audioMap.get(this);
-        // console.log('get', current);
-        audioMap.forEach(function(audio){
-            if( audio != current ){
-                audio.pause();
-                audio.currentTime = 0;
-            }
-        });
-    });
-});
+
 
 still issues with starting and stopping musing using button.
 

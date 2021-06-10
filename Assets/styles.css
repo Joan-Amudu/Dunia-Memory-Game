@@ -3,7 +3,7 @@
 body {
   font-family: Mate SC;
   background-color: #9191BA;
-  height: 100vh;
+  
 }
 
 p {
@@ -68,10 +68,11 @@ hr {
   display: flex;  
 }
 img {
-  height: 125px;
-  width: 85px;
+  width: 125px;
+  height: 85px;
   padding: 5px;
   margin: 5px;
+  object-fit: cover;
 } 
 
   /*----- About Page -----*/
