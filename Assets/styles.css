@@ -67,12 +67,16 @@ hr {
   align-items: center;
   display: flex;  
 }
+#playpausebtn{
+  background: transparent;
+  
+}
 img {
   width: 125px;
   height: 85px;
   padding: 5px;
   margin: 5px;
-  object-fit: cover;
+  
 } 
 
   /*----- About Page -----*/

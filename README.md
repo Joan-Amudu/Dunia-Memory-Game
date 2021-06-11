@@ -210,7 +210,7 @@ Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/clo
 * [Pexels](https://www.pexels.com/) - Used for free stock.
     - [cottonbro](https://www.pexels.com/@cottonbro)
     
-
+[pause icon](By GitHub - https://github.com/github/octicons, MIT, https://commons.wikimedia.org/w/index.php?curid=33440636)
 
 ## Other resources
 * [w3schools.com](https://www.w3schools.com/default.asp): used for a deeper understanding of HTML and CSS.
