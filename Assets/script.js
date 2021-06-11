@@ -39,8 +39,10 @@ let flippedCardId = []
 let cardsWon = []
 let restartGame;
 
+
 document.addEventListener("DOMContentLoaded", function () {
     gameBoard()
+    
 
     restartGame = document.getElementById("startGame");
     restartGame.addEventListener("click", startClock);
@@ -71,24 +73,10 @@ var music, playbtn;
  }
 
 // Timer
-function startClock() {
-    
-    var count = 0;
-    setInterval(function() {
-      if (count > 60) { // We check if the timer is in seconds or mins
-        var time = ++count; // We get a copy of the time in "seconds"
-        time = parseInt(time / 60); // We convert it to mins
-        elem.innerText = time + "m";
-    } else { // Simmilarly we can also add a condition to check hours with s=3600
-        elem.innerText = ++count + "s";
-    }
-    }, 1000);
-}
-function stopClock() {
-    clearInterval(elem)
-    const elem = document.getElementById("countTimer");
-    elem.innerHTML = "0s"
-}
+
+
+
+
 
 
 
@@ -110,9 +98,7 @@ function gameBoard() {
       grid.appendChild(card)        
   }      
 }
-//if(flippedCard.length === 1 && flippedCard[0] === cardId){
-   // return
-//}
+
 // check for match
 function checkForMatch() {   
     let cards = document.querySelectorAll("img")
@@ -130,18 +116,18 @@ function checkForMatch() {
     results.textContent = cardsWon.length
     if (cardsWon.length === cardArray.length/2) {
         results.textContent = "You Won!!"
-        stopClock();               
+                      
          
-    }
-        
+    }        
 }
 
 // flip card
 function flipCard() {
-     let cardId = this.getAttribute("data-id")
+    let cardId = this.getAttribute("data-id")
     flippedCard.push(cardArray[cardId].name)
     flippedCardId.push(cardId)
-    this.setAttribute("src", cardArray[cardId].img)             
+    this.setAttribute("src", cardArray[cardId].img) 
+               
     if(flippedCard.length === 2) {
       setTimeout(checkForMatch, 500)      
   }

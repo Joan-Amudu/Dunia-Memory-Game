@@ -212,6 +212,11 @@ Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/clo
     
 [pause icon](By GitHub - https://github.com/github/octicons, MIT, https://commons.wikimedia.org/w/index.php?curid=33440636)
 
+[codepen](https://codepen.io/Fako29/pen/ZEOjyBV) solutuion to doucle clicking card: 
+original code - line 98: 
+if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
+  
+
 ## Other resources
 * [w3schools.com](https://www.w3schools.com/default.asp): used for a deeper understanding of HTML and CSS.
 * [StackOverflow](https://stackoverflow.com/): Used for troubleshooting. 
