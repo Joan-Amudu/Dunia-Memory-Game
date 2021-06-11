@@ -2,14 +2,12 @@
 
 body {
   font-family: Mate SC;
-  background-color: #9191BA;
-  
+  background-color: #9191BA;  
 }
 
 p {
   font-family: Playfair;
   font-size: 1.2em;
-
 }
 
 hr {
@@ -19,16 +17,16 @@ hr {
   background-color: #f2ff2f;
 }
 
-.btn-primary {
+.btn,
+.btn-primary,
+.btn:hover,
+.btn-primary:hover {
   color: #000;
   background-color: #f2ff2f;
   border-color: #f2ff2f;
 }
 
-.btn-primary:hover {
-  background-color: #f2ff2f;
-  border-color: #f2ff2f;
-}
+
 /*-Navbar*/
 
 .navbar-brand,

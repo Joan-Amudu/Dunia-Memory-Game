@@ -182,7 +182,7 @@ JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSX
 
 
 
-still issues with starting and stopping musing using button.
+
 
 for count timer --- [stackover flow](https://stackoverflow.com/questions/43317415/create-a-count-up-timer-in-javascript)
 
@@ -215,7 +215,7 @@ Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/clo
 [codepen](https://codepen.io/Fako29/pen/ZEOjyBV) solutuion to doucle clicking card: 
 original code - line 98: 
 if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
-  
+
 
 ## Other resources
 * [w3schools.com](https://www.w3schools.com/default.asp): used for a deeper understanding of HTML and CSS.

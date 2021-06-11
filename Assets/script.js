@@ -33,19 +33,13 @@ cardArray.sort(() => 0.5 - Math.random());
 // declaring variables and getting DOM elements.
 let grid = document.querySelector(".grid");
 let results = document.querySelector("#result");
-let elem = document.getElementById("countTimer");
 let flippedCard = []
 let flippedCardId = []
 let cardsWon = []
-let restartGame;
 
 
 document.addEventListener("DOMContentLoaded", function () {
     gameBoard()
-    
-
-    restartGame = document.getElementById("startGame");
-    restartGame.addEventListener("click", startClock);
 
 });
 
@@ -73,12 +67,18 @@ var music, playbtn;
  }
 
 // Timer
-
-
-
-
-
-
+var elem = $('countTimer');
+var count = 0;
+setInterval(function() {
+  if (count > 60) { // We check if the timer is in seconds or mins
+    var time = ++count; // We get a copy of the time in 'seconds'
+    time = parseInt(time / 60); // We convert it to mins
+    $(elem).text(time + 'm');
+  } else { // Simmilarly we can also add a condition to check hours with s=3600
+    $(elem).text(++count + 's');
+  }
+}, 1000);
+   
 
 function gameBoard() {         
   let startText = Array.from(document.getElementsByClassName("start-text"));               
@@ -96,7 +96,8 @@ function gameBoard() {
       card.setAttribute("data-id", i)
       card.addEventListener("click", flipCard)          
       grid.appendChild(card)        
-  }      
+  }
+      
 }
 
 // check for match
@@ -116,8 +117,6 @@ function checkForMatch() {
     results.textContent = cardsWon.length
     if (cardsWon.length === cardArray.length/2) {
         results.textContent = "You Won!!"
-                      
-         
     }        
 }
 
@@ -126,8 +125,7 @@ function flipCard() {
     let cardId = this.getAttribute("data-id")
     flippedCard.push(cardArray[cardId].name)
     flippedCardId.push(cardId)
-    this.setAttribute("src", cardArray[cardId].img) 
-               
+    this.setAttribute("src", cardArray[cardId].img)                
     if(flippedCard.length === 2) {
       setTimeout(checkForMatch, 500)      
   }
