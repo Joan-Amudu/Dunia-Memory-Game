@@ -44,13 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Audio Controls
-window.addEventListener("load", initAudioPlayer); 
+window.addEventListener("load", audioPlayer); 
 var music, playbtn;
- function initAudioPlayer() {
-     music = new Audio("Assets/sounds/BackgroundMusic.mp3");     
+ function audioPlayer() {
+     music = new Audio("assets/sounds/BackgroundMusic.mp3");     
      music.loop = true;
      
-     // set onject references
+     // set object references
      playbtn = document.getElementById("playpausebtn");
      
      // Add event handling
@@ -66,20 +66,6 @@ var music, playbtn;
      }
  }
 
-// Timer
-var elem = $('countTimer');
-var count = 0;
-setInterval(function() {
-  if (count > 60) { // We check if the timer is in seconds or mins
-    var time = ++count; // We get a copy of the time in 'seconds'
-    time = parseInt(time / 60); // We convert it to mins
-    $(elem).text(time + 'm');
-  } else { // Simmilarly we can also add a condition to check hours with s=3600
-    $(elem).text(++count + 's');
-  }
-}, 1000);
-   
-
 function gameBoard() {         
   let startText = Array.from(document.getElementsByClassName("start-text"));               
       startText.forEach(start =>{
@@ -92,7 +78,7 @@ function gameBoard() {
       });          
   for (let i = 0; i < cardArray.length; i++)  {
       var card = document.createElement("img")
-      card.setAttribute("src", "Assets/images/backface.jpg")
+      card.setAttribute("src", "assets/images/backface.jpg")
       card.setAttribute("data-id", i)
       card.addEventListener("click", flipCard)          
       grid.appendChild(card)        
@@ -108,8 +94,8 @@ function checkForMatch() {
     if (flippedCard[0] === flippedCard[1] && firstCardId !== secondCardId) {
         cardsWon.push(flippedCard)
     } else {
-        cards[firstCardId].setAttribute("src", "Assets/images/backface.jpg")
-        cards[secondCardId].setAttribute("src", "Assets/images/backface.jpg")
+        cards[firstCardId].setAttribute("src", "assets/images/backface.jpg")
+        cards[secondCardId].setAttribute("src", "assets/images/backface.jpg")
         
     }
     flippedCard = []
@@ -132,5 +118,19 @@ function flipCard() {
       
 }
 
-  
+function startTimer(flippedCard) {
+    // Timer
+var elem = document.getElementById("countTimer");
+var count = 0;
+setInterval(function() {
+  if (count > 60) { // We check if the timer is in seconds or mins
+    var time = ++count; // We get a copy of the time in 'seconds'
+    time = parseInt(time / 60); // We convert it to mins
+    $(elem).text(time + 'm');
+  } else { // Simmilarly we can also add a condition to check hours with s=3600
+    $(elem).text(++count + 's');
+  }
+}, 1000);
+
+}
 
