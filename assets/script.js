@@ -118,17 +118,18 @@ function flipCard() {
       
 }
 
-function startTimer(flippedCard) {
+function startTimer() {
     // Timer
 var elem = document.getElementById("countTimer");
+elem.addEventListener("click", startTimer);
 var count = 0;
 setInterval(function() {
   if (count > 60) { // We check if the timer is in seconds or mins
     var time = ++count; // We get a copy of the time in 'seconds'
     time = parseInt(time / 60); // We convert it to mins
-    $(elem).text(time + 'm');
+    elem.innerHTML = time + 'm';
   } else { // Simmilarly we can also add a condition to check hours with s=3600
-    $(elem).text(++count + 's');
+    elem.innerHTML = ++count + 's';
   }
 }, 1000);
 
