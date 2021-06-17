@@ -1,6 +1,6 @@
 
-    // creating an array of cards(12 pair images of flags of European Countries)
-    let cardArray = [
+// creating an array of cards(12 pair images of flags of European Countries)
+let cardArray = [
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},  
     {name: "Andorra", img:"assets/images/flags/Andorra.svg.png"},

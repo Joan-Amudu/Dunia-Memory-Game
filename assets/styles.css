@@ -164,37 +164,6 @@ color: #f2ff2f;
 
 }
 
-
-
-  /*----- Media Querries -----*/
-
-@media (max-width: 600px) {
-
-  h3 {
-    font-size: 1.5em;
-  }
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 400px;
-    justify-content: center;
-    margin: auto;
-  }
-
-  .scoreBoard {  
-    margin: 10px;
-    justify-content: space-evenly;
-    display: grid;
-     
-  }
-  img {
-    height: 85px;
-    width: 65px;
-    padding: 5px;
-    margin: 5px;
-  }
-
 /*-----------start Text --------------*/
 
 @keyframes start-grow {
@@ -223,8 +192,35 @@ color: #f2ff2f;
       justify-content: center;
     }
 
-}
+/*----- Media Querries -----*/
 
+@media (max-width: 600px) {
+
+  h3 {
+    font-size: 1.5em;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .scoreBoard {  
+    margin: 10px;
+    justify-content: space-evenly;
+    display: grid;
+     
+  }
+  img {
+    height: 85px;
+    width: 65px;
+    padding: 5px;
+    margin: 5px;
+  }
+}
 @media (max-width: 1700px) {
   footer {
     margin-top: auto;
