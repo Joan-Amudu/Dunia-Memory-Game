@@ -1,5 +1,4 @@
-
-// creating an array of cards(12 pair images of flags of European Countries)
+/** creating an array of cards(12 pair images of flags of European Countries) */
 let cardArray = [
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},  
@@ -27,10 +26,10 @@ let cardArray = [
     {name: "Finland", img:"assets/images/flags/Finland.svg.png"},   
 ];
 
-// Using Math.random to shuffle to game board.
+/** Using Math.random to shuffle to game board. */
 cardArray.sort(() => 0.5 - Math.random());
 
-// declaring variables and getting DOM elements.
+/** declaring variables and getting DOM elements. */
 let grid = document.querySelector(".grid");
 let results = document.querySelector("#result");
 let flippedCard = []
