@@ -1,4 +1,6 @@
-/** creating an array of cards(12 pair images of flags of European Countries) */
+/** An array of cards(12 pair images of flags of European Countries) 
+ * @type {Array<string>}
+*/
 let cardArray = [
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},
     {name: "Albania", img:"assets/images/flags/Albania.svg.png"},  
@@ -36,15 +38,21 @@ let flippedCard = []
 let flippedCardId = []
 let cardsWon = []
 
-
+/**The gameBoard function is called when the DOMContent is loaded */
 document.addEventListener("DOMContentLoaded", function () {
     gameBoard()
-
 });
 
-// Audio Controls
+/**
+ * Audio controls
+ * @param {string} load - called when page is loaded
+ * @param {string} audioPlayer - background music
+ */
 window.addEventListener("load", audioPlayer); 
 var music, playbtn;
+/**
+ * @type {function} audioPlayer - A function that generates background music 
+ */
  function audioPlayer() {
      music = new Audio("assets/sounds/BackgroundMusic.mp3");     
      music.loop = true;
@@ -55,8 +63,8 @@ var music, playbtn;
      // Add event handling
      playbtn.addEventListener("click", playPause);
     
-     // Functions
-     function playPause() {
+    //A function to pause the background music  
+    function playPause() {
          if(music.paused) {
              music.play();
          } else {
@@ -65,6 +73,10 @@ var music, playbtn;
      }
  }
 
+/**
+ * The gameBoard function starts with an overlay text - click to start.
+ * @param {} gameBaord
+ */
 function gameBoard() {         
   let startText = Array.from(document.getElementsByClassName("start-text"));               
       startText.forEach(start =>{
@@ -73,19 +85,22 @@ function gameBoard() {
               music.play();              
            
           });
-
-      });          
-  for (let i = 0; i < cardArray.length; i++)  {
-      var card = document.createElement("img")
-      card.setAttribute("src", "assets/images/backface.jpg")
-      card.setAttribute("data-id", i)
-      card.addEventListener("click", flipCard)          
-      grid.appendChild(card)        
-  }
-      
+      }); 
+      // A for loop that iterates through the cardArray and assigns a data id from 0 - 23
+      // An event listener to listen out if a card has been clicked and invorke the flipCard function
+     for (let i = 0; i < cardArray.length; i++)  {
+        var card = document.createElement("img")
+        card.setAttribute("src", "assets/images/backface.jpg")
+        card.setAttribute("data-id", i)
+        card.addEventListener("click", flipCard)          
+        grid.appendChild(card) 
+      }      
 }
 
-// check for match
+/**
+ * check for match when cards are flipped
+ * @param {} checkForMatch
+ */
 function checkForMatch() {   
     let cards = document.querySelectorAll("img")
     let firstCardId = flippedCardId[0]
@@ -105,32 +120,19 @@ function checkForMatch() {
     }        
 }
 
-// flip card
+/**
+ * A flip card function that flips a card.
+ * This fucntion will get the data-id from the gameBoard function.
+ * if the flipped card array is equal to 2, the CheckForMatch function will be invoked 
+ * @param {} flipCard 
+ */
 function flipCard() {
     let cardId = this.getAttribute("data-id")
     flippedCard.push(cardArray[cardId].name)
     flippedCardId.push(cardId)
-    this.setAttribute("src", cardArray[cardId].img)                
+    this.setAttribute("src", cardArray[cardId].img)             
     if(flippedCard.length === 2) {
       setTimeout(checkForMatch, 500)      
-  }
-      
-}
-
-function startTimer() {
-    // Timer
-var elem = document.getElementById("countTimer");
-elem.addEventListener("click", startTimer);
-var count = 0;
-setInterval(function() {
-  if (count > 60) { // We check if the timer is in seconds or mins
-    var time = ++count; // We get a copy of the time in 'seconds'
-    time = parseInt(time / 60); // We convert it to mins
-    elem.innerHTML = time + 'm';
-  } else { // Simmilarly we can also add a condition to check hours with s=3600
-    elem.innerHTML = ++count + 's';
-  }
-}, 1000);
-
+  }      
 }
 
