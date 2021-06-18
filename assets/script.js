@@ -105,24 +105,19 @@ cardArray.sort(() => 0.5 - Math.random());
 /** declaring variables and getting DOM elements. */
 let grid = document.querySelector(".grid");
 let results = document.querySelector("#result");
-let flippedCard = []
-let flippedCardId = []
-let cardsWon = []
+let flippedCard = [];
+let flippedCardId = [];
+let cardsWon = [];
 
 /**The gameBoard function is called when the DOMContent is loaded */
 document.addEventListener("DOMContentLoaded", function() {
-gameBoard()
+gameBoard();
 });
 
-/**
-* Audio controls
-* @param {string} load - called when page is loaded
-* @param {string} audioPlayer - background music
-*/
 window.addEventListener("load", audioPlayer);
 var music, playbtn;
 /**
-* @type {function} audioPlayer - A function that generates background music 
+* @param {} audioPlayer - A function that generates background music 
 */
 function audioPlayer() {
 music = new Audio("assets/sounds/BackgroundMusic.mp3");
@@ -153,15 +148,16 @@ startText.forEach(start => {
         music.play();
 
     });
+
 });
 // A for loop that iterates through the cardArray and assigns a data id from 0 - 23
 // An event listener to listen out if a card has been clicked and invorke the flipCard function
 for (let i = 0; i < cardArray.length; i++) {
-    var card = document.createElement("img")
-    card.setAttribute("src", "assets/images/backface.jpg")
-    card.setAttribute("data-id", i)
-    card.addEventListener("click", flipCard)
-    grid.appendChild(card)
+    var card = document.createElement("img");
+    card.setAttribute("src", "assets/images/backface.jpg");
+    card.setAttribute("data-id", i);
+    card.addEventListener("click", flipCard);
+    grid.appendChild(card);
 }
 }
 
@@ -174,21 +170,23 @@ for (let i = 0; i < cardArray.length; i++) {
 * @param {} checkForMatch
 */
 function checkForMatch() {
-let cards = document.querySelectorAll("img")
-let firstCardId = flippedCardId[0]
-let secondCardId = flippedCardId[1]
+let cards = document.querySelectorAll("img");
+let firstCardId = flippedCardId[0];
+let secondCardId = flippedCardId[1];
 if (flippedCard[0] === flippedCard[1] && firstCardId !== secondCardId) {
-    cardsWon.push(flippedCard)
+    cardsWon.push(flippedCard);
 } else {
-    cards[firstCardId].setAttribute("src", "assets/images/backface.jpg")
-    cards[secondCardId].setAttribute("src", "assets/images/backface.jpg")
+    cards[firstCardId].setAttribute("src", "assets/images/backface.jpg");
+    cards[secondCardId].setAttribute("src", "assets/images/backface.jpg");
 
 }
 flippedCard = []
 flippedCardId = []
-results.textContent = cardsWon.length
+results.textContent = cardsWon.length;
 if (cardsWon.length === cardArray.length / 2) {
-    results.textContent = "You Won!!"
+    results.textContent = "You Won!!";
+    music.pause();
+
 }
 }
 
@@ -200,11 +198,11 @@ if (cardsWon.length === cardArray.length / 2) {
 * @param {} flipCard 
 */
 function flipCard() {
-let cardId = this.getAttribute("data-id")
-flippedCard.push(cardArray[cardId].name)
-flippedCardId.push(cardId)
-this.setAttribute("src", cardArray[cardId].img)
+let cardId = this.getAttribute("data-id");
+flippedCard.push(cardArray[cardId].name);
+flippedCardId.push(cardId);
+this.setAttribute("src", cardArray[cardId].img);
 if (flippedCard.length === 2) {
-    setTimeout(checkForMatch, 500)
+    setTimeout(checkForMatch, 500);
 }
 }

@@ -2,6 +2,7 @@
 
 body {
   font-family: Mate SC;
+  text-align: center;
   background-color: #9191BA;  
 }
 
@@ -26,20 +27,48 @@ hr {
   border-color: #f2ff2f;
 }
 
+/*-----------start Text --------------*/
+.start-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #f2ff2f;
+}
+.start-text-small {
+  font-size: .3em;
+}
+.start-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: start-grow 500ms forwards;
+}
+@keyframes start-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 10em;
+  }
+}
 
-/*-Navbar*/
-
+/*-----------Navbar --------------*/
 .navbar-brand,
 .navbar-brand:hover {
   color: #f2ff2f;
   font-size: 3em;
 }
-
 .navbar-nav .nav-link {
   color: #f2ff2f;
   font-size: 1.5em;  
 }
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -67,132 +96,30 @@ hr {
 }
 #playpausebtn{
   background: transparent;
-  
 }
 img {
   width: 125px;
   height: 85px;
   padding: 5px;
   margin: 5px;
-  
 } 
 
-  /*----- About Page -----*/
+/*-----------About Modal--------------*/
 .About,
 .play {
   text-align: center;
   padding: 30px;
   margin: 20px;
- }
-
- form {
-  justify-content: center;
-  padding: 30px;
-  margin: 20px;
 }
-
-.contact-label {
-  font-size: 1.2em;
-}
-
-/*-----------start Text --------------*/
-
-.start-text {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;  
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  color: #f2ff2f;
-}
-
-.start-text-small {
-  font-size: .3em;
-}
-
-.start-text.visible {
-  display: flex;
-  flex-direction: column;
-  animation: start-grow 500ms forwards;
-}
-
-@keyframes start-grow {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 0;
-  }
-  to {
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 10em;
-  }
-}
-
-/*---------Modal------*/
-
 .text-center a {
   font-size: 1.5em;
   padding: 0 10px;
 }
-
 .text-center i {
     color: #777777
 }
 
-/*---------Footer------*/
-footer {
-  margin-top: auto;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center; 
-  position: fixed;
-}
-footer a {
- 
-  background-color: transparent;
-  color: #f2ff2f;
-  padding: 10px;
-  font-size: 1.2em;
-}
-
-footer a:hover {
-color: #f2ff2f;
-
-}
-
-/*-----------start Text --------------*/
-
-@keyframes start-grow {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 0;
-  }
-  to {
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 5em;
-  }
-}
- 
-/*------ Form --------*/
-
-    .col-sm {
-      padding: 5px;
-      margin: 10px;      
-    }
-
-    .contact-label {
-      justify-content: center;
-    }
-
-    button {
-      justify-content: center;
-    }
-
-/*----- Media Querries -----*/
+/*-----------Media Querries--------------*/
 
 @media (max-width: 600px) {
 
