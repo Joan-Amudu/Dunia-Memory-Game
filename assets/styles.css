@@ -21,7 +21,9 @@ hr {
 .btn,
 .btn-primary,
 .btn:hover,
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary.focus, 
+.btn-primary:focus {
   color: #000;
   background-color: #f2ff2f;
   border-color: #f2ff2f;
