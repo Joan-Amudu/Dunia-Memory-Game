@@ -42,6 +42,11 @@ hr {
 }
 .start-text-small {
   font-size: .3em;
+  color: #f2ff2f;
+  text-decoration: none;
+}
+.start-text-small:hover {
+  color: #f2ff2f;
 }
 .start-text.visible {
   display: flex;

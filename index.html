@@ -20,13 +20,12 @@
       <nav id="navItem"class="navbar navbar-expand-lg">
          <div class="container-fluid">
             <a class="navbar-brand" href="index.html">DUNIA</a>
-            <a class="btn btn-primary" id="startGame" href="index.html">Restart Game</a>
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">About</button>   
          </div>
       </nav>
       <!--Overlay Text will be displayed to start game, when user has won and gameover when the time runs out-->
       <div class="start-text visible">Click to Start</div>
-      <div id="victory-text" class="start-text">You Won! <span class="start-text-small" id="startGame">Click to Restart.</span></div>
+      <div id="victory-text" class="start-text">You Won!<a class="start-text-small" id="startGame" type="button" href="index.html">Click to Restart</a></div>
       <!--ScoreBoard will display scores and time-->
       <section class="scoreBoard">
          <h4>Score: <span id="result"></span></h4>

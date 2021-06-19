@@ -185,9 +185,17 @@ flippedCardId = []
 results.textContent = cardsWon.length;
 if (cardsWon.length === cardArray.length / 2) {
     results.textContent = "You Won!!";
+    victory();
     music.pause();
-
 }
+}
+/**
+ * A victory function which add the visible class to displays an overlay text after the use has won the game.
+ * The user can then click to restart the game and play again.
+ * @param {} victory - Is called after all cards have been matched.
+ */
+function victory() {
+    document.getElementById("victory-text").classList.add("visible");
 }
 
 /**
