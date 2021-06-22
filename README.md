@@ -112,14 +112,6 @@ JacaScript -
 
 # Testing 
 
-## Testing User stories
-* As a player I want to quickly know what the game is about.
-* As a player, I want instructions on how to play the game, so that I know what to expect.
-* As a player I want to go through different levels of the game.
-* As a player I want to see my progress through a scoreboard.
-* As a player, I want to be able to mute/unmute any sounds
-
-
 ## Functional Testing
 
 The testing below is identical on all pages.
@@ -151,6 +143,15 @@ This will be tested on the following browsers:
   - Internet Explorer
 
 ## Responsiveness
+
+
+
+## Testing User stories
+* As a player I want to quickly know what the game is about.
+* As a player, I want instructions on how to play the game, so that I know what to expect.
+* As a player I want to go through different levels of the game.
+* As a player I want to see my progress through a scoreboard.
+* As a player, I want to be able to mute/unmute any sounds
 
   
 #### [Back to top](<#table-of-content>)

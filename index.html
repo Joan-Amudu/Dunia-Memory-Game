@@ -5,7 +5,9 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Favicon -->
+      <!--Meta Description-->
+      <meta name="description" content="A memory card game.">
+      <!--Favicon -->
     <link rel="icon" href="assets/images/favicon.jpg" type="image" />
       <!--Bootstrap v 4.6-->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -13,7 +15,6 @@
       <link rel="stylesheet" href="assets/css/styles.css">
       <!--Font Awesome-->
       <script src="https://kit.fontawesome.com/b22084529e.js" crossorigin="anonymous"></script>
-      <!--JavaScript File-->
       <!--Tile-->
       <title>Dunia Memory Card Game</title>
    </head>
@@ -21,8 +22,8 @@
       <!--Navigation Bar-->  
       <nav id="navItem" class="navbar navbar-expand-lg">
          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">DUNIA</a>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">About</button>   
+            <a class="navbar-brand" href="index.html" rel="noopener">DUNIA</a>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" aria-label="About">About</button>   
          </div>
       </nav>
       <!--Overlay Text will be displayed to start game, when user has won and gameover when the time runs out-->
@@ -32,7 +33,7 @@
       <section class="scoreBoard">
          <h4>Score: <span id="result"></span></h4>
          <!--Sound Controls--> 
-         <button id="playpausebtn"><i class="fas fa-music"></i></button>       
+         <button id="playpausebtn" aria-label="Play-Pause"><i class="fas fa-music"></i></button>       
       </section>
       <!--Creating a grid for the game board-->  
       <section class="grid"></section>
@@ -42,9 +43,9 @@
             <div class="modal-content">
                <div class="modal-header">
                   <div class="text-center">
-                     <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                     <a href="https://www.github.com" target="_blank"><i class="fab fa-github-square"></i></a>
-                     <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>
+                     <a href="https://www.github.com" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a>
+                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>

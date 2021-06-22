@@ -3,99 +3,123 @@
  */
  let cardArray = [{
     name: "Albania",
-    img: "assets/images/flags/Albania.svg.png"
+    img: "assets/images/flags/Albania.svg.png",
+    
 },
 {
     name: "Albania",
-    img: "assets/images/flags/Albania.svg.png"
+    img: "assets/images/flags/Albania.svg.png",
+    
 },
 {
     name: "Andorra",
-    img: "assets/images/flags/Andorra.svg.png"
+    img: "assets/images/flags/Andorra.svg.png",
+    
 },
 {
     name: "Andorra",
-    img: "assets/images/flags/Andorra.svg.png"
+    img: "assets/images/flags/Andorra.svg.png",
+    
 },
 {
     name: "Armenia",
-    img: "assets/images/flags/Armenia.svg.png"
+    img: "assets/images/flags/Armenia.svg.png",
+    
 },
 {
     name: "Armenia",
-    img: "assets/images/flags/Armenia.svg.png"
+    img: "assets/images/flags/Armenia.svg.png",
+    
 },
 {
     name: "Austria",
-    img: "assets/images/flags/Austria.svg.png"
+    img: "assets/images/flags/Austria.svg.png",
+    
 },
 {
     name: "Austria",
-    img: "assets/images/flags/Austria.svg.png"
+    img: "assets/images/flags/Austria.svg.png",
+    
 },
 {
     name: "Ireland",
-    img: "assets/images/flags/Ireland.svg.png"
+    img: "assets/images/flags/Ireland.svg.png",
+    
 },
 {
     name: "Ireland",
-    img: "assets/images/flags/Ireland.svg.png"
+    img: "assets/images/flags/Ireland.svg.png",
+    
 },
 {
     name: "Belarus",
-    img: "assets/images/flags/Belarus.svg.png"
+    img: "assets/images/flags/Belarus.svg.png",
+    
 },
 {
     name: "Belarus",
-    img: "assets/images/flags/Belarus.svg.png"
+    img: "assets/images/flags/Belarus.svg.png",
+   
 },
 {
     name: "Malta",
-    img: "assets/images/flags/Malta.svg.png"
+    img: "assets/images/flags/Malta.svg.png",
+    
 },
 {
     name: "Malta",
-    img: "assets/images/flags/Malta.svg.png"
+    img: "assets/images/flags/Malta.svg.png",
+   
 },
 {
     name: "Croatia",
-    img: "assets/images/flags/Croatia.svg.png"
+    img: "assets/images/flags/Croatia.svg.png",
+   
 },
 {
     name: "Croatia",
-    img: "assets/images/flags/Croatia.svg.png"
+    img: "assets/images/flags/Croatia.svg.png",
+    
 },
 {
     name: "Cyprus",
-    img: "assets/images/flags/Cyprus.svg.png"
+    img: "assets/images/flags/Cyprus.svg.png",
+    
 },
 {
     name: "Cyprus",
-    img: "assets/images/flags/Cyprus.svg.png"
+    img: "assets/images/flags/Cyprus.svg.png",
+    
 },
 {
     name: "France",
-    img: "assets/images/flags/France.svg.png"
+    img: "assets/images/flags/France.svg.png",
+    
 },
 {
     name: "France",
-    img: "assets/images/flags/France.svg.png"
+    img: "assets/images/flags/France.svg.png",
+   
 },
 {
     name: "Estonia",
-    img: "assets/images/flags/Estonia.svg.png"
+    img: "assets/images/flags/Estonia.svg.png",
+   
 },
 {
     name: "Estonia",
-    img: "assets/images/flags/Estonia.svg.png"
+    img: "assets/images/flags/Estonia.svg.png",
+   
 },
 {
     name: "Finland",
-    img: "assets/images/flags/Finland.svg.png"
+    img: "assets/images/flags/Finland.svg.png",
+    
 },
 {
     name: "Finland",
-    img: "assets/images/flags/Finland.svg.png"
+    img: "assets/images/flags/Finland.svg.png",
+    
 },
 ];
 
@@ -155,6 +179,7 @@ startText.forEach(start => {
 for (let i = 0; i < cardArray.length; i++) {
     var card = document.createElement("img");
     card.setAttribute("src", "assets/images/backface.jpg");
+    card.setAttribute("alt", "image of colored feathers");
     card.setAttribute("data-id", i);
     card.addEventListener("click", flipCard);
     grid.appendChild(card);
