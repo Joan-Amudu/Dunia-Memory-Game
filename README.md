@@ -31,6 +31,8 @@ The game is based on matching flags of european countries.
 * To win the game, simple match all 12 flags.
 * To play again, click on the Restart Game button and the card deck will be shuffled.
 
+#### [Back to top](<#table-of-content>)
+
 # User Experience 
 This section highlights the business objectives and user experience .
 
@@ -50,19 +52,66 @@ This section highlights the business objectives and user experience .
 The webiste's design and layout is based on fonts, colors, wireframes, images and icons.
 
 ### Fonts
-* [Google Fonts](https://fonts.google.com/) was imported to CSS with the Oswald font family being the main font and San Serif the fall back font.
+* [Google Fonts](https://fonts.google.com/) was imported to CSS with the Mate SC font family being the main font for the body and playfair font for the paragraphs and San Serif the fall back font.
 
 ### Wireframes
 * Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
 
-
-
 * A pdf of the wireframes can be found [here](/Assets/Wireframes/Dunia-Memory-Game.pdf). This file can also be downloaded from Github. (**Please Note:** _[Adobe Acrobat Reader](https://get.adobe.com/reader/) is required to view files in pdf format_).
 
+#### [Back to top](<#table-of-content>)
 
 # Features
-lorem ipsum....
-    
+The website incorparates a header with the logo on the left a navigation bar with menu items on the left. It aslo incorporates a footer with social media icons. The header and footer are responsive and maintain consistency on all pages.
+### **Existing Features**
+Smooth scrolling for better UX, with hover function that lights up in the nav when moving sections.
+
+Included in the **header** is:
+
+* **Navigation Bar:** Fully responsive navbar will expand outside of smaller devices and overall provides a user friendly and intuitive browsing experience.
+
+Included in the **footer** is:
+
+* **Social media links:** Which will take you to the various social media connections: GitHub, Instagram, LinkedIn. Which will open in a new tab to maintain user retention.
+
+Included in the **Home/landing** section is:
+
+* **Logo, Developers name, Slogan:** A brief introduction to the owner and slogan. 
+* **Animated Circle Element:** To give a focus point that captures your attention immediately at the site. 
+
+Included in the **About Me** section is:
+
+* **Introduction to Developer:** A introduction about the owner, with background information and education, as well as interests. An elevator pitch.  
+* **Skills bars:**  Bar to illustrate the developers current skills(HTML,CSS, Bootstrap etc.), learning and want to learn. 
+
+Included in the **Projects** section is:
+
+* **Projects Containers:** Provides information and image of projects, with a hover animation. With clickable links.
+
+Included in the **Contact** section is:
+
+* **Contact Form:** Can be filled out with email and message query (with validation, “@” and “.”) and submitted to contact the owner. Currently due to no JavaScript the form cannot store or send data.
+
+* **Modal:** A modal that lets the user know they have been successful in sending the message.
+
+Included in the **DownloadCV** link is:
+
+* **Download CV text and Icon:** A icon for the user to download the CV of the developer on a new page. 
+
+Included in the **404.html** page is:
+
+* A message telling the user they have accessed a page which does not exist.
+* A button which is linked to index.html that prompts them to return to the site.
+
+### **Features Left to Implement**
+
+* To fill in the project section with real-life projects.
+* To implement the email function to deliver the messages from the user to the developer. As well as letting the user verify their email.
+* To update skills when learning new program languages. 
+* Possibly testimonials/references of the user to enhance more credibility and trust. 
+* Add a view all projects button that takes the user to a new page with more projects.
+
+#### [Back to top](<#table-of-content>)  
  
 # Technologies
 This project is created with:
@@ -77,41 +126,37 @@ JacaScript -
 * GitHub - Used for hosting the code and version control.
 * GitHub Pages - This is where the site is deployed.
 
+#### [Back to top](<#table-of-content>)
+
 # Testing 
 
 ## Testing User stories
-lorem ipsum....
+* As a player I want to quickly know what the game is about.
+* As a player, I want instructions on how to play the game, so that I know what to expect.
+* As a player I want to go through different levels of the game.
+* As a player I want to see my progress through a scoreboard.
+* As a player, I want to be able to mute/unmute any sounds
+
 
 ## Functional Testing
-### All pages
+
 The testing below is identical on all pages.
-Action | Expected Result | Pass/Fail 
----------------|---------------|---------------
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
+Test Label | Action | Expected Result | Pass/Fail 
+---------------|---------------|---------------|---------------
+Label1 |Test Case 1| N/A | Fail
+Label1 |Test Case 1| N/A | Fail
+Label1 |Test Case 1| N/A | Fail
+Label1 |Test Case 1| N/A | Fail
 ||
 
 
-
-### Home Page
-Action | Expected Result | Pass/Fail 
----------------|---------------|---------------
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
-||
-
-
-### Contact Us Page
-Action | Expected Result | Pass/Fail 
----------------|---------------|---------------
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
-Test Case 1| N/A | Fail
-||
+#### [Back to top](<#table-of-content>)
 
 ## Validators
+HTML Code must pass through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
+
+CSS Code must pass through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
+
 - [HTML Validator](https://validator.w3.org/) .
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) .
 
@@ -126,6 +171,7 @@ This will be tested on the following browsers:
 ## Responsiveness
 
   
+#### [Back to top](<#table-of-content>)
 
 # Deployment
 This website was created in gitpod, which is linked to Github. All changes were commited and pushed to Github.
@@ -166,6 +212,7 @@ To fork this respository:
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more information about cloning repositories.
 
+#### [Back to top](<#table-of-content>)
 
 # Credits
 Below are the resources that were used to create this website.
@@ -217,7 +264,8 @@ if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) {
 * [StackOverflow](https://stackoverflow.com/): Used for troubleshooting. 
 * YouTube - [Ania Kubow](https://youtu.be/tjyDOHzKN0w)
 * Code Institute course modules.
-
+#### [Back to top](<#table-of-content>)
 # Acknowledgements
 I would like to acknowledgement my mentor Brian Macharia who guided me throughout the project.
 
+#### [Back to top](<#table-of-content>)
