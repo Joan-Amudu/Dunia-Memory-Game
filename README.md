@@ -52,7 +52,7 @@ This section highlights the business objectives and user experience .
 The webiste's design and layout is based on fonts, colors, wireframes, images and icons.
 
 ### Fonts
-* [Google Fonts](https://fonts.google.com/) was imported to CSS with the Mate SC font family being the main font for the body and playfair font for the paragraphs and San Serif the fall back font.
+* [Google Fonts](https://fonts.google.com/) was imported to CSS with the Mate SC font family being the main font for the body and playfair font for the paragraphs.
 
 ### Wireframes
 * Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
@@ -64,52 +64,34 @@ The webiste's design and layout is based on fonts, colors, wireframes, images an
 # Features
 The website incorparates a header with the logo on the left a navigation bar with menu items on the left. It aslo incorporates a footer with social media icons. The header and footer are responsive and maintain consistency on all pages.
 ### **Existing Features**
-Smooth scrolling for better UX, with hover function that lights up in the nav when moving sections.
+
+
+
+
+Included in the **Home/landing** section is:
+
+* **An ovelay text - Click to start:** This prompts the player to click and start the game. Clicking the overlay text alos reveals the Nav bar with the Brand Name and About Modal button and the card deck with scoreboard 
+* **Animated Circle Element:** To give a focus point that captures your attention immediately at the site. 
 
 Included in the **header** is:
 
 * **Navigation Bar:** Fully responsive navbar will expand outside of smaller devices and overall provides a user friendly and intuitive browsing experience.
 
-Included in the **footer** is:
+Included in the **About Modal** is:
 
 * **Social media links:** Which will take you to the various social media connections: GitHub, Instagram, LinkedIn. Which will open in a new tab to maintain user retention.
 
-Included in the **Home/landing** section is:
 
-* **Logo, Developers name, Slogan:** A brief introduction to the owner and slogan. 
-* **Animated Circle Element:** To give a focus point that captures your attention immediately at the site. 
 
-Included in the **About Me** section is:
 
-* **Introduction to Developer:** A introduction about the owner, with background information and education, as well as interests. An elevator pitch.  
-* **Skills bars:**  Bar to illustrate the developers current skills(HTML,CSS, Bootstrap etc.), learning and want to learn. 
+### **Nice to have Features **
+These are feratures that would have been hice to have as they would have an added value for the player. These features will aslo be implemented in the future.
 
-Included in the **Projects** section is:
-
-* **Projects Containers:** Provides information and image of projects, with a hover animation. With clickable links.
-
-Included in the **Contact** section is:
-
-* **Contact Form:** Can be filled out with email and message query (with validation, “@” and “.”) and submitted to contact the owner. Currently due to no JavaScript the form cannot store or send data.
-
-* **Modal:** A modal that lets the user know they have been successful in sending the message.
-
-Included in the **DownloadCV** link is:
-
-* **Download CV text and Icon:** A icon for the user to download the CV of the developer on a new page. 
-
-Included in the **404.html** page is:
-
-* A message telling the user they have accessed a page which does not exist.
-* A button which is linked to index.html that prompts them to return to the site.
-
-### **Features Left to Implement**
-
-* To fill in the project section with real-life projects.
-* To implement the email function to deliver the messages from the user to the developer. As well as letting the user verify their email.
-* To update skills when learning new program languages. 
-* Possibly testimonials/references of the user to enhance more credibility and trust. 
-* Add a view all projects button that takes the user to a new page with more projects.
+* A timer to .
+* difficulty levels.
+* Victory music. 
+* flipping cards music. 
+* A summary of scores and time spent after the user has.
 
 #### [Back to top](<#table-of-content>)  
  
