@@ -39,7 +39,7 @@ This section highlights the business objectives and user experience .
 
 
 ## User Stories
-* As a user I want to quickly know what the game is about.
+* As a player I want to quickly know what the game is about.
 * As a player, I want instructions on how to play the game, so that I know what to expect.
 * As a player I want to go through different levels of the game.
 * As a player I want to see my progress through a scoreboard.
@@ -68,6 +68,7 @@ lorem ipsum....
 This project is created with:
 * HTML5 - used for building the website.
 * CSS3 - for styling elements.
+JacaScript - 
 * Google Fonts - .
 * Bootstrap - to customise the site as a responsive mobile-first site.
 
