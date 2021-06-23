@@ -24,13 +24,13 @@ The deployed site can be found [here](https://joan-amudu.github.io/Dunia-Memory-
 
 # General Information
 ## About
-Dunia in Kiswahili means - The World. The idea behind this memory game was inspired from my love for travelling.
+Dunia in Kiswahili means - The World. The idea behind this memory game was inspired from my love for travel.
 
 The game is based on matching flags of european countries. 
 ## How to Play
-* To play, simply click on a card to reveal the flag and find a match. Once the user matches 2 identical flags, 1 point is scored. 
+* To play, simply click on a card to reveal the flag and find a match. Once the player matches 2 identical flags, 1 point is scored. 
 * To win the game, simple match all 12 flags.
-* To play again, click to Restart text will be displayed prompting the user to restart the game and the card deck will be shuffled.
+* To play again, an overlay Click to Restart text will be displayed prompting the user to restart the game and the card deck will be shuffled.
 
 #### [Back to top](<#table-of-content>)
 
@@ -71,7 +71,7 @@ This color palette was inspired and generated from the backface image of the car
 # Features
 The website incorparates a navigation bar with a brand name and a button as a menu item on the left. 
 
-It aslo consists of a landing page with overlay text which are fully responsive.
+It also consists of a landing page with overlay text which are fully responsive.
 
 ### **Existing Features**
 
@@ -79,19 +79,19 @@ Included in the **Landing** page is:
 
 * **An ovelay text - Click to start:** This prompts the player to click and start the game. Clicking the overlay text also reveals the Nav bar with the Brand Name and About Modal button and the card deck with scoreboard 
 
-* **Navigation Bar:** The navbar as adopted from bootstrap is fully responsive navbar and overall provides a user friendly and intuitive browsing experience.
+* **Navigation Bar:** The navbar, as adopted from bootstrap is fully responsive and overall provides a user friendly and intuitive browsing experience.
 
-* **About Button** : This is a Modal with right-aligned social media icons (Facebook, GitHub, LinkedIn). These icons are links to the respective social media pages and will open in a new tab to maintain user retention.
+* **About Button** : This is a Modal with right-aligned social media icons (Facebook, GitHub, LinkedIn). These icons are links to their respective social media pages and will open in a new tab to maintain user retention.
 The **Modal** also has content about the game and how to play it.
 
 
 ### **Nice to have Features**
-These are fnice-to-have features that would provide an added value for the player and can be implemented in afuture project. 
+These are nice-to-have features that would provide an added value for the player and can be implemented in a future project. 
 
 * **A timer**: This timer will start counting when the player clicks the first card. In addition, a **Count-down timer**, where the time is predefined for the player and the player either wins the game within that set time or will lose and a **game-over** overlay text will be displayed.
 * **Timer controls**: To give the player more control, the timer would have an on/off functionality, allowing them to choose to play a timed game or a more relaxed game without the timer, thus allowing the player to get more familiar with the game and give them higher chances of winning.
 * **Difficulty levels**: This would include easy, medium and hard levels of difficulty.
-* **Additional Music**: This would include a game-over music, and would apply when the **Count-down timer** is chosen. The **game-over** music will be activated when the **Count-down timer** has ended indicating that the player has lost the game.
+* **Additional Music**: This would include a **game-over** music, and would apply when the **Count-down timer** is chosen. The **game-over** music will be activated when the **Count-down timer** has ended indicating that the player has lost the game.
 To add to the user experience, a joyful **Victory** music when the player has won the game, along with the accompanying overlay text. 
 
 #### [Back to top](<#table-of-content>)  
@@ -159,13 +159,13 @@ This is achieved from the About button, which reveals a Modal containing informa
 * As a player, I want instructions on how to play the game, so that I know what to expect. - 
 This is achieved from the About button, which reveals a Modal containing information about the game and how to play it.
 * As a player I want to see my progress through a scoreboard. - 
-The scores are displayed against the score label. 1 score for each match, up to a total of 12 scores indocating that the player has won the game.
+The scores are displayed against the score label. 1 score for each match, up to a total of 12 scores indicating that the player has won the game. 
 * As a player, I want to be able to mute/unmute any sounds. - 
-The Music icon button, when clicked, pauses the music. And when music is pause, the palyer ca click the button again to play the background music.
+The Music icon button, when clicked, pauses the music. And when music is paused, the player can click the button again to play the background music.
 
 ## Validators
 **HTML Code** was passed through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
-* Because the cards are appended to the grid via Javascript, a h2-h6 tag was not neccesariy as suggested in the HTML validator, and doesnot affect the functionality or responsiveness of the site.
+* Because the cards are appended to the grid via Javascript, h2-h6 HTML element tags are not neccesary as suggested in the HTML validator. The exclusion of the HTML heading tags doesnot affect the functionality or responsiveness of the site.
 
 ![validated HTML Code](assets/images/HTMLValidator.png)
 
