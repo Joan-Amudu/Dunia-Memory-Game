@@ -62,24 +62,21 @@ The webiste's design and layout is based on fonts, colors, wireframes, images an
 #### [Back to top](<#table-of-content>)
 
 # Features
-The website incorparates a header with the logo on the left a navigation bar with menu items on the left. It aslo incorporates a footer with social media icons. The header and footer are responsive and maintain consistency on all pages.
+The website incorparates a navigation bar with a brand name and a button as a menu item on the left. 
+
+It aslo consists of a landing page with over-lay text which are fully responsive.
+
 ### **Existing Features**
 
-
-
-
-Included in the **Home/landing** section is:
+Included in the **Landing** page is:
 
 * **An ovelay text - Click to start:** This prompts the player to click and start the game. Clicking the overlay text alos reveals the Nav bar with the Brand Name and About Modal button and the card deck with scoreboard 
-* **Animated Circle Element:** To give a focus point that captures your attention immediately at the site. 
-
-Included in the **header** is:
 
 * **Navigation Bar:** Fully responsive navbar will expand outside of smaller devices and overall provides a user friendly and intuitive browsing experience.
 
-Included in the **About Modal** is:
+ **About Button** : This ia Modal with right-aligned social media icons: GitHub, Instagram, LinkedIn
 
-* **Social media links:** Which will take you to the various social media connections: GitHub, Instagram, LinkedIn. Which will open in a new tab to maintain user retention.
+* **Social media links:** is a  Which will take you to the various social media connections: . Which will open in a new tab to maintain user retention.
 
 
 
@@ -200,8 +197,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 # Credits
 Below are the resources that were used to create this website.
 ## Code
-javascript code and structure inspired by [Ania Kubrow.](https://youtu.be/tjyDOHzKN0w) and [Port exe](https://youtu.be/3uuQ3g92oPQ)
-
+Javascript code and structure inspired by [Ania Kubrow](https://youtu.be/tjyDOHzKN0w) and [Port Exe](https://youtu.be/3uuQ3g92oPQ)
 
 JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSXzdn_0Gg)
 
@@ -209,19 +205,7 @@ JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSX
 
 
 
-for count timer --- [stackover flow](https://stackoverflow.com/questions/43317415/create-a-count-up-timer-in-javascript)
 
-  var elem = $('#countTimer');
-  var count = 0;
-  setInterval(function() {
-  if (count > 60) { // We check if the timer is in seconds or mins
-    var time = ++count; // We get a copy of the time in 'seconds'
-    time = parseInt(time / 60); // We convert it to mins
-    $(elem).text(time + 'm');
-  } else { // Simmilarly we can also add a condition to check hours with s=3600
-    $(elem).text(++count + 's');
-  }
-}, 1000);
 
 ## Images
 Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
@@ -235,7 +219,7 @@ Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/clo
 * [Pexels](https://www.pexels.com/) - Used for free stock.
     - [cottonbro](https://www.pexels.com/@cottonbro)
     
-[pause icon](By GitHub - https://github.com/github/octicons, MIT, https://commons.wikimedia.org/w/index.php?curid=33440636)
+
 
 [codepen](https://codepen.io/Fako29/pen/ZEOjyBV) solutuion to doucle clicking card: 
 original code - line 98: 
@@ -245,7 +229,7 @@ if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) {
 ## Other resources
 * [w3schools.com](https://www.w3schools.com/default.asp): used for a deeper understanding of HTML and CSS.
 * [StackOverflow](https://stackoverflow.com/): Used for troubleshooting. 
-* YouTube - [Ania Kubow](https://youtu.be/tjyDOHzKN0w)
+
 * Code Institute course modules.
 #### [Back to top](<#table-of-content>)
 # Acknowledgements
