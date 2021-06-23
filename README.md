@@ -40,7 +40,6 @@ This section highlights the user experience, design, fonts and color scheme used
 ## User Stories
 * As a player I want to quickly know what the game is about.
 * As a player, I want instructions on how to play the game, so that I know what to expect.
-* As a player I want to go through different levels of the game.
 * As a player I want to see my progress through a scoreboard.
 * As a player, I want to be able to mute/unmute any sounds
 
@@ -113,20 +112,34 @@ This project is created with:
 # Testing 
 
 ## Functional Testing
+This detailed testing is done to ensure that the differrent aspects of the application work as intended. 
 
-The testing below is identical on all pages.
-Test Label | Action | Expected Result | Pass/Fail 
----------------|---------------|---------------|---------------
-Label1 |Test Case 1| N/A | Fail
-Label1 |Test Case 1| N/A | Fail
-Label1 |Test Case 1| N/A | Fail
-Label1 |Test Case 1| N/A | Fail
+
+Test Case | Action | Expected Result | Pass/Fail | Comments 
+---------------|---------------|---------------|---------------|---------------
+TC001 |Clicking Ovelay Text| Clicking the "Click to Start" text will display the landin page with Nav bar and card deck | Pass
+TC002 |Clicking Ovelay Text| When the play Clicks the "Click to Start" background music should start playing | Pass | The speaker favicon will be displyed on browser to show that the current tab is playing an audio
+TC003 |Clicking Brand Name| The Brand name - Dunia, when clicked should return the user to the home page and can also be used to restart the game| Pass 
+TC004 |About Button| When the player click the About button, a Modal will be displayed| Pass
+TC005 |Hovering over facebook icon from Modal| The facebook HTTP link should be displayed from the bottom right of the page| Pass
+TC006 |Clicking facebook icon from Modal| The link should open in a new tab| Pass | Users must have a facebook account in order to login, or register for one. 
+TC007 |Hovering over github icon from Modal| The github HTTP link should be displayed from the bottom right of the page| Pass
+TC008 |Clicking github icon from Modal| The link should open in a new tab| Pass | github repositories can be viewed without a user account, however it is advisable to have one 
+TC009 |Hovering over Linkedin icon from Modal| The Linkedin HTTP link should be displayed from the bottom right of the page| Pass
+TC0010 |Clicking Linkedin icon from Modal| The link should open in a new tab| Pass | Users must have a Linkedin account in order to login, or register for one. 
+TC0011 |Clicking on a card| This action should flip the card and reveal the frontface flag image| Pass
+TC0012 |Clicking on a second card| This action should flip the card and reveal the frontface flag image, so 2 cards will be revealed simultaneously | Pass
+TC0013 |Clicked cards are a match| When both cards are a match, a score will be recored against the score label on the scoreboard | Pass
+TC0014 |Clicked cards are not a match| If cards a not a match, after a 500ms timeout, they will flip back and backface image will be shown giving the user a chance to play those cards again| Pass
+TC0015 |Clicking a card twice| This flip the card back and backface image will be shown| Pass
+TC0016 |Matching all cards| This should record a total of 12 on the score board and a "You Won" overlay displayed.| Pass
+TC0017 |"You won" Over lay text| This should stop the background music| Pass
+TC00418 |"Click to restart" small overlay text| clicking the text prompts the player to restart the game| Pass | The game will restart with the "Click to start" overlay text
+TC0019 |Clicking the music Icon| This pause the music| Pass | The speaker favicon on browser will disappear, idicating that the current tab is not aplaying any audio
 ||
 
 
 #### [Back to top](<#table-of-content>)
-
-
 
 ## Brower Compatitbility
 This will be tested on the following browsers:
@@ -141,10 +154,13 @@ The site was tested on different screen sizes with special attention to very sma
 
 ## Testing User stories
 * As a player I want to quickly know what the game is about.
+This is achieved from the About button, which reveals a Modal containing information about the game and how to play it.
 * As a player, I want instructions on how to play the game, so that I know what to expect.
-* As a player I want to go through different levels of the game.
+This is achieved from the About button, which reveals a Modal containing information about the game and how to play it.
 * As a player I want to see my progress through a scoreboard.
+The scores are displayed against the score label. 1 score for each match, up to a total of 12 scores indocating that the player has won the game.
 * As a player, I want to be able to mute/unmute any sounds
+The Music icon button, when clicked, pauses the music. And when music is pause, the palyer ca click the button again to play the background music.
 
 ## Validators
 **HTML Code** was passed through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
