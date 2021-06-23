@@ -1,4 +1,5 @@
 # DUNIA
+<img src="assets/images/DuniaResponsive.png">
 
 The deployed site can be found [here](https://joan-amudu.github.io/Dunia-Memory-Game/)
 
@@ -23,7 +24,7 @@ The deployed site can be found [here](https://joan-amudu.github.io/Dunia-Memory-
 
 # General Information
 ## About
-Dunia in Kiswahili means - The World. This memory game will be based on the world map and is inspired by my love for travel.
+Dunia in Kiswahili means - The World. The idea behind this memory game was inspired from my love for travelling.
 
 The game is based on matching flags of european countries. 
 ## How to Play
@@ -146,12 +147,15 @@ The site was tested on different screen sizes with special attention to very sma
 * As a player, I want to be able to mute/unmute any sounds
 
 ## Validators
-HTML Code must pass through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
+**HTML Code** was passed through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
+* Because the cards are appened to the grid via Javascript, a h2-h6 tag was not neccesariy as suggested in the HTML validator, and doesnot affect the functionality or responsiveness of the site.
 
-CSS Code must pass through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
+![validated HTML Code](assets/images/HTMLValidator.png)
 
-- [HTML Validator](https://validator.w3.org/) .
-- [CSS Validator](https://jigsaw.w3.org/css-validator/) .
+**CSS Code** was passed through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
+
+![validated HTML Code](assets/images/CSSValidator.png)
+
 
 ## Lighhouse Report  
 ### Mobile
@@ -160,7 +164,9 @@ CSS Code must pass through the **[W3C CSS Validator](https://jigsaw.w3.org/css-v
 
 ### Desktop
 ![lighthouse report desktop](assets/images/DuniaDesktop.png)
+
 #### [Back to top](<#table-of-content>)
+
 
 # Deployment
 This website was created in gitpod, which is linked to Github. All changes were commited and pushed to Github.
@@ -178,7 +184,12 @@ The project was deployed to GitHub Pages using the following steps...
 7. Scroll back down through the page to locate the now published site [link](https://joan-amudu.github.io/Dunia-Memory-Game/) in the "GitHub Pages" section.
 
 ### Forking
-To fork this respository:
+
+1. Login to your account on [Github](https://github.com/).
+2. Locate the [Repository](https://github.com/Joan-Amudu/Dunia-Memory-Game) used for this project.
+3. On the right-hand side of the Repository name, you'll see the 'Fork' button.
+4. This will create a copy in your personal repository.
+5. Once you're finished making changes, return to original repository and press 'New Pull Request' to request your changes to be merged into the original project.
 
 ### Making a Local Clone
 
@@ -206,42 +217,61 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 # Credits
 Below are the resources that were used to create this website.
 ## Code
-Javascript code and structure inspired by [Ania Kubrow](https://youtu.be/tjyDOHzKN0w) and [Port Exe](https://youtu.be/3uuQ3g92oPQ)
+* Javascript code and structure inspired by [Ania Kubrow](https://youtu.be/tjyDOHzKN0w) and [Port Exe](https://youtu.be/3uuQ3g92oPQ)
 
-JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSXzdn_0Gg)
+* JavaScript Audio Controls code snippet from [Adam Khoury.](https://youtu.be/hsSXzdn_0Gg)
 
+* Click on the card twice would record a score. So to fix this, a solutuion  from [codepen](https://codepen.io/Fako29/pen/ZEOjyBV) was used. 
+ 
+      * original code from line 98:
 
+  ```javascript
+  if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) 
+  ```
 
 
 
 
 
 ## Images
-Back face Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
+Backface Image on cards by James Lee: [Pexels](https://www.pexels.com/photo/close-up-photo-of-feathers-2625664/).
+
+All flag images are from [wikipedia Commons](https://commons.wikimedia.org/wiki/Main_Page) -  a free media repository.
 
 
-## Inspirations
+[Albania](https://commons.wikimedia.org/wiki/File:Flag_of_Albania.svg)
 
-* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/), a popular front-end open source toolkit has been used for the columns, rows, buttons and form.
-* [Font Awesome](https://fontawesome.com/) was used for the social media icons. Here, the free icons were selected and styled to match the overall color-scheme of the website. 
+[Andorra](https://commons.wikimedia.org/wiki/File:Andorra_Flag.svg)
 
-* [Pexels](https://www.pexels.com/) - Used for free stock.
-    - [cottonbro](https://www.pexels.com/@cottonbro)
-    
+[Armenia](https://commons.wikimedia.org/w/index.php?curid=342948)
+
+[Austria](https://commons.wikimedia.org/w/index.php?curid=342954)
+ 
+[Estonia](https://commons.wikimedia.org/w/index.php?curid=343044)
+
+[Finland](https://commons.wikimedia.org/w/index.php?curid=343054)
+
+[France](https://en.wikipedia.org/w/index.php?curid=33285388)
+
+[Cyprus](https://commons.wikimedia.org/w/index.php?curid=433230)
+
+[Croatia](https://commons.wikimedia.org/w/index.php?curid=433228)
+
+[Ireland](https://commons.wikimedia.org/w/index.php?curid=343611)
+
+[Belarus](https://commons.wikimedia.org/w/index.php?curid=75422931)
 
 
-[codepen](https://codepen.io/Fako29/pen/ZEOjyBV) solutuion to doucle clicking card: 
-original code - line 98: 
-if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
+[Malta](https://commons.wikimedia.org/w/index.php?curid=433234)
 
 
 ## Other resources
 * [w3schools.com](https://www.w3schools.com/default.asp): used for a deeper understanding of HTML and CSS.
 * [StackOverflow](https://stackoverflow.com/): Used for troubleshooting. 
-
 * Code Institute course modules.
 #### [Back to top](<#table-of-content>)
 # Acknowledgements
-I would like to acknowledgement my mentor Brian Macharia who guided me throughout the project.
+I would like to acknowledge my mentor Brian Macharia who guided me throughout the project. His professionalism and knowledge sharing approach and attitude are a great inspiration to me.
 
+I would aslo like to acknowledge fellow Code Institute Students [Vanja Torp](https://github.com/VTwin90/Milestone-1-Portfolio) and [Ciaran Concannon](https://github.com/cjcon90/country-quiz/blob/main/README.md). Both their README files were greatly inspiring and well written. Through their full permission, this README document was structured according to theirs and my previous [project](https://github.com/Joan-Amudu/Amani-Kickboxing-Gym). 
 #### [Back to top](<#table-of-content>)
