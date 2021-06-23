@@ -34,11 +34,7 @@ The game is based on matching flags of european countries.
 #### [Back to top](<#table-of-content>)
 
 # User Experience 
-This section highlights the business objectives and user experience .
-
-
-
-
+This section highlights the user experience, design, fonts and color scheme used to provide a seemless user experience.
 
 ## User Stories
 * As a player I want to quickly know what the game is about.
@@ -53,6 +49,16 @@ The webiste's design and layout is based on fonts, colors, wireframes, images an
 
 ### Fonts
 * [Google Fonts](https://fonts.google.com/) was imported to CSS with the Mate SC font family being the main font for the body and playfair font for the paragraphs.
+
+### Color Scheme
+
+This color palette was inspired and generated from the backface image of the cards.
+* **#B25823 (Desert):** Used for the < hr > HTML element. 
+* **#10273D (Elephant):** Used for socila media icons and paragraph text.
+* **#ECD223 (Golden Dream):** Used for the Brand name, About button and overlay texts.
+* **#5495B2 (Hippie Blue):** Used as the background color.
+
+![Color Scheme](assets/images/colorPalette.png)
 
 ### Wireframes
 * Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
@@ -74,21 +80,18 @@ Included in the **Landing** page is:
 
 * **Navigation Bar:** Fully responsive navbar will expand outside of smaller devices and overall provides a user friendly and intuitive browsing experience.
 
- **About Button** : This ia Modal with right-aligned social media icons: GitHub, Instagram, LinkedIn
-
-* **Social media links:** is a  Which will take you to the various social media connections: . Which will open in a new tab to maintain user retention.
-
+* **About Button** : This is a Modal with right-aligned social media icons (Facebook, GitHub, LinkedIn). These icons are links to the respective social media pages and will open in a new tab to maintain user retention.
+The **Modal** also has content about the game and how to play it.
 
 
+### **Nice to have Features**
+These are features that would have been hice to have as they would have an added value for the player. These features will aslo be implemented in the future.
 
-### **Nice to have Features **
-These are feratures that would have been hice to have as they would have an added value for the player. These features will aslo be implemented in the future.
-
-* A timer to .
-* difficulty levels.
-* Victory music. 
-* flipping cards music. 
-* A summary of scores and time spent after the user has.
+* **A timer**: This timer wouls start counting when the user clicks the first card when starting the game. In addition, a **Count-down timer**, where the time is predefined for the user and the user either wins the game within that set time or will lose and a **game-over** overlay text will be displayed.
+* **Timer controls**: To give the player more control, the timer would have an on/off functionality, allowing them to choose to play a timed game or a more relaxed game without the timer counting down, thus allowing them to get more familiar with the game and give them higher chances of winning.
+* **Difficulty levels**: This would include easy, medium and hard levels of difficulty.
+* **Additional Music**: This would include a game-over music, and would apply when the **Count-down timer** is chosen. The **game-over** music will be activated when the **Count-down timer** has ended indicating that the player has lost the game.
+To add to the user experience, a joyful **Victory** music when the player has won the game, along with the accompanying overlay text. 
 
 #### [Back to top](<#table-of-content>)  
  
@@ -96,10 +99,9 @@ These are feratures that would have been hice to have as they would have an adde
 This project is created with:
 * HTML5 - used for building the website.
 * CSS3 - for styling elements.
-JacaScript - 
-* Google Fonts - .
+* JacaScript - used to make the web page more interactive.
+* Google Fonts - Mate Sc and Playfair.
 * Bootstrap - to customise the site as a responsive mobile-first site.
-
 * Font Awesome - for Icons.
 * Balsamic - to creation of the Wireframes.
 * GitHub - Used for hosting the code and version control.
@@ -123,13 +125,7 @@ Label1 |Test Case 1| N/A | Fail
 
 #### [Back to top](<#table-of-content>)
 
-## Validators
-HTML Code must pass through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
 
-CSS Code must pass through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
-
-- [HTML Validator](https://validator.w3.org/) .
-- [CSS Validator](https://jigsaw.w3.org/css-validator/) .
 
 ## Brower Compatitbility
 This will be tested on the following browsers:
@@ -137,10 +133,9 @@ This will be tested on the following browsers:
   - Microsoft Edge
   - Firefox
   - Safari
-  - Internet Explorer
-
+  
 ## Responsiveness
-
+The site was tested on different screen sizes with special attention to very small screens e.g. iPhone 5 and very large screens e.g. 5K iMac Pro (5120 x 2880 px).
 
 
 ## Testing User stories
@@ -150,7 +145,21 @@ This will be tested on the following browsers:
 * As a player I want to see my progress through a scoreboard.
 * As a player, I want to be able to mute/unmute any sounds
 
-  
+## Validators
+HTML Code must pass through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
+
+CSS Code must pass through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
+
+- [HTML Validator](https://validator.w3.org/) .
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) .
+
+## Lighhouse Report  
+### Mobile
+![lighthouse report mobile](assets/images/DuniaMobile.png)
+
+
+### Desktop
+![lighthouse report desktop](assets/images/DuniaDesktop.png)
 #### [Back to top](<#table-of-content>)
 
 # Deployment
