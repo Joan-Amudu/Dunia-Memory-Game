@@ -63,7 +63,8 @@ This color palette was inspired and generated from the backface image of the car
 ### Wireframes
 * Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
 
-* A pdf of the wireframes can be found [here](/wireframes/Dunia-Memory-Game.pdf). This file can also be downloaded from Github. (**Please Note:** _[Adobe Acrobat Reader](https://get.adobe.com/reader/) is required to view files in pdf format_).
+![Home](assets/wireframes/Dunia_wireframes.png)
+* A pdf of the wireframes can be found [here](assets/wireframes/Dunia_wireframes.pdf). This file can also be downloaded from Github. (**Please Note:** _[Adobe Acrobat Reader](https://get.adobe.com/reader/) is required to view files in pdf format_).
 
 #### [Back to top](<#table-of-content>)
 
