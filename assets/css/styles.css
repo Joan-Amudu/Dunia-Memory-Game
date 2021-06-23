@@ -1,323 +1,339 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display&display=swap');
-
 body {
-  font-family: Mate SC;
-  text-align: center;
-  background-color: #5495B2;  
+	font-family: Mate SC;
+	text-align: center;
+	background-color: #5495B2;
 }
 
 p {
-  font-family: Playfair;
-  font-size: 1.2em;
-  color: #10273D
+	font-family: Playfair;
+	font-size: 1.2em;
+	color: #10273D
 }
 
 hr {
-  width: 100px;
-  height: 5px;
-  border: 0;
-  background-color: #B25823;
+	width: 100px;
+	height: 5px;
+	border: 0;
+	background-color: #B25823;
 }
 
 .btn,
 .btn-primary,
 .btn:hover,
 .btn-primary:hover,
-.btn-primary.focus, 
+.btn-primary.focus,
 .btn-primary:focus {
-  color: #000;
-  background-color: #ECD223;
-  border-color: #ECD223;
+	color: #000;
+	background-color: #ECD223;
+	border-color: #ECD223;
 }
+
 
 /*-----------start Text --------------*/
+
 .start-text {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;  
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  color: #ECD223;
-}
-.start-text-small {
-  font-size: .3em;
-  color: #ECD223;
-  text-decoration: none;
-}
-.start-text-small:hover {
-  color: #ECD223;
-}
-.start-text.visible {
-  display: flex;
-  flex-direction: column;
-  animation: start-grow 500ms forwards;
-}
-@keyframes start-grow {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 0;
-  }
-  to {
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 10em;
-  }
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	color: #ECD223;
 }
 
-/*-----------Navbar --------------*/
+.start-text-small {
+	font-size: .3em;
+	color: #ECD223;
+	text-decoration: none;
+}
+
+.start-text-small:hover {
+	color: #ECD223;
+}
+
+.start-text.visible {
+	display: flex;
+	flex-direction: column;
+	animation: start-grow 500ms forwards;
+}
+
+@keyframes start-grow {
+	from {
+		background-color: rgba(0, 0, 0, 0);
+		font-size: 0;
+	}
+	to {
+		background-color: rgba(0, 0, 0, .8);
+		font-size: 10em;
+	}
+}
+
+
+/*-----------Navbar--------------*/
+
 .navbar-brand,
 .navbar-brand:hover {
-  color: #ECD223;
-  font-size: 3em;
-}
-.navbar-nav .nav-link {
-  color: #ECD223;
-  font-size: 1.5em;  
+	color: #ECD223;
+	font-size: 3em;
 }
 
+.navbar-nav .nav-link {
+	color: #ECD223;
+	font-size: 1.5em;
+}
+
+
 /*-----------ScoreBoard--------------*/
-.scoreBoard {  
-  margin: 10px;
-  justify-content: space-evenly;
-  align-items: center;
-  display: flex;  
+
+.scoreBoard {
+	margin: 10px;
+	justify-content: space-evenly;
+	align-items: center;
+	display: flex;
 }
-#playpausebtn{
-  background: transparent;
+
+#playpausebtn {
+	background: transparent;
 }
+
 
 /*-----------Card Grid--------------*/
+
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 600px;
-  height: 600px;
-  justify-content: center;
-  margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 600px;
+	justify-content: center;
+	margin: auto;
 }
-.grid > div {  
-  border: orange 1px solid;
-  width: 71px;
-  height: 91px;
-  float: left;
-  margin: 10px;
-  padding: 20px;
-  font-size: 64px;
-  cursor: pointer;
-  text-align: left;  
+
+.grid>div {
+	border: orange 1px solid;
+	width: 71px;
+	height: 91px;
+	float: left;
+	margin: 10px;
+	padding: 20px;
+	font-size: 64px;
+	cursor: pointer;
+	text-align: left;
 }
+
 img {
-  width: 125px;
-  height: 85px;
-  padding: 5px;
-  margin: 5px;
-} 
+	width: 125px;
+	height: 85px;
+	padding: 5px;
+	margin: 5px;
+}
+
 
 /*-----------About Modal--------------*/
+
 .About,
 .play {
-  text-align: center;
-  padding: 30px;
-  margin: 20px;
+	text-align: center;
+	padding: 30px;
+	margin: 20px;
 }
+
 .text-center a {
-  font-size: 1.5em;
-  padding: 0 10px;
+	font-size: 1.5em;
+	padding: 0 10px;
 }
+
 .text-center i {
-    color: #10273D
+	color: #10273D
 }
+
 
 /*-----------Media Querries--------------*/
+
 @media (max-width: 400px) {
-
-  h4 {
-    font-size: 1.2em;
-  }
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 400px;
-    justify-content: center;
-    margin: auto;
-  }
-
-  .scoreBoard {  
-    margin: 10px;
-    justify-content: space-evenly;
-    display: grid;
-     
-  }
-  img {
-    width: 65px;
-    height: 45px;
-    
-    padding: 5px;
-    margin: 5px;
-  }
-  .start-text {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;  
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    color: #eff599;
-  }
-  .start-text-small {
-    font-size: .3em;
-    color: #ECD223;
-    text-decoration: none;
-  }
-  .start-text-small:hover {
-    color: #ECD223;
-  }
-  .start-text.visible {
-    display: flex;
-    flex-direction: column;
-    animation: start-grow 500ms forwards;
-  }
-  @keyframes start-grow {
-    from {
-      background-color: rgba(0, 0, 0, 0);
-      font-size: 0;
-    }
-    to {
-      background-color: rgba(0, 0, 0, .8);
-      font-size: 5em;
-    }
-  }
-  
+	h4 {
+		font-size: 1.2em;
+	}
+	/*-----------ScoreBoard--------------*/
+	.scoreBoard {
+		margin: 10px;
+		justify-content: space-evenly;
+		display: grid;
+	}
+	/*-----------Card Grid--------------*/
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		width: 300px;
+		height: 400px;
+		justify-content: center;
+		margin: auto;
+	}
+	img {
+		width: 65px;
+		height: 45px;
+		padding: 5px;
+		margin: 5px;
+	}
+	/*-----------start Text --------------*/
+	.start-text {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		justify-content: center;
+		align-items: center;
+		z-index: 100;
+		color: #eff599;
+	}
+	.start-text-small {
+		font-size: .3em;
+		color: #ECD223;
+		text-decoration: none;
+	}
+	.start-text-small:hover {
+		color: #ECD223;
+	}
+	.start-text.visible {
+		display: flex;
+		flex-direction: column;
+		animation: start-grow 500ms forwards;
+	}
+	@keyframes start-grow {
+		from {
+			background-color: rgba(0, 0, 0, 0);
+			font-size: 0;
+		}
+		to {
+			background-color: rgba(0, 0, 0, .8);
+			font-size: 5em;
+		}
+	}
 }
-@media (max-width: 600px) {
 
-  h4 {
-    font-size: 1.5em;
-  }
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 400px;
-    justify-content: center;
-    margin: auto;
-  }
-/*-----------ScoreBoard--------------*/
-  .scoreBoard {  
-    margin: 10px;
-    justify-content: space-evenly;
-    display: grid;
-     
-  }
-  img {
-    width: 65px;
-    height: 45px;
-    padding: 5px;
-    margin: 5px;
-  }
+@media (max-width: 600px) {
+	h4 {
+		font-size: 1.5em;
+	}
+	/*-----------ScoreBoard--------------*/
+	.scoreBoard {
+		margin: 10px;
+		justify-content: space-evenly;
+		display: grid;
+	}
+	/*-----------Card Grid--------------*/
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		width: 300px;
+		height: 400px;
+		justify-content: center;
+		margin: auto;
+	}
+	img {
+		width: 65px;
+		height: 45px;
+		padding: 5px;
+		margin: 5px;
+	}
 }
 
 @media (max-width: 1700px) {
-  footer {
-    margin-top: auto;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    padding: 20px;
-  }
-}
-@media screen and (min-width:2560px) { 
-body,
-html {
-  height: 100%;
-}
-h4 {
-  font-size: 6em;
+	footer {
+		margin-top: auto;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		position: fixed;
+		padding: 20px;
+	}
 }
 
-/*-----------Nav Bar--------------*/
-.navbar-brand,
-.navbar-brand:hover { 
-  font-size: 8em;
-}
-.navbar-nav .nav-link {  
-  font-size: 3em;  
-}
-
-/*-----------About Modal--------------*/
-.btn,
-.btn-primary{
-  font-size: 5em;
-}
-.Modal{
-  width: auto;
-}
-/*-----------ScoreBoard--------------*/
-.scoreBoard {  
-  margin: 10px;
-  justify-content: space-evenly;
-  display: flex;
-  padding-top: 60px;     
-}
-#playpausebtn{
-  font-size: 3em;
-}
-
-/*-----------Card Grid--------------*/
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1000px;
-  height: 800px;
-  justify-content: center;
-  margin: auto;
-  padding-top: 40px;
-}
-img {
-  width: 225px;
-  height: 200px;    
-  padding: 5px;
-  margin: 5px;
-}
-
-/*-----------start Text --------------*/
-.start-text {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;  
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  color: #eff599;
-}
-.start-text-small {
-  font-size: .6em;
-}
-.start-text.visible {
-  display: flex;
-  flex-direction: column;
-  animation: start-grow 500ms forwards;
-}
-@keyframes start-grow {
-  from {
-   background-color: rgba(0, 0, 0, 0);
-   font-size: 0;
-}
-  to {
-   background-color: rgba(0, 0, 0, .8);
-   font-size: 12em;
-  }
-}  
+@media screen and (min-width:2560px) {
+	body,
+	html {
+		height: 100%;
+	}
+	h4 {
+		font-size: 6em;
+	}
+	/*-----------Nav Bar--------------*/
+	.navbar-brand,
+	.navbar-brand:hover {
+		font-size: 8em;
+	}
+	.navbar-nav .nav-link {
+		font-size: 3em;
+	}
+	/*-----------About Modal--------------*/
+	.btn,
+	.btn-primary {
+		font-size: 5em;
+	}
+	.Modal {
+		width: auto;
+	}
+	/*-----------ScoreBoard--------------*/
+	.scoreBoard {
+		margin: 10px;
+		justify-content: space-evenly;
+		display: flex;
+		padding-top: 60px;
+	}
+	#playpausebtn {
+		font-size: 3em;
+	}
+	/*-----------Card Grid--------------*/
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		width: 1000px;
+		height: 800px;
+		justify-content: center;
+		margin: auto;
+		padding-top: 40px;
+	}
+	img {
+		width: 225px;
+		height: 200px;
+		padding: 5px;
+		margin: 5px;
+	}
+	/*-----------start Text --------------*/
+	.start-text {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		justify-content: center;
+		align-items: center;
+		z-index: 100;
+		color: #eff599;
+	}
+	.start-text-small {
+		font-size: .6em;
+	}
+	.start-text.visible {
+		display: flex;
+		flex-direction: column;
+		animation: start-grow 500ms forwards;
+	}
+	@keyframes start-grow {
+		from {
+			background-color: rgba(0, 0, 0, 0);
+			font-size: 0;
+		}
+		to {
+			background-color: rgba(0, 0, 0, .8);
+			font-size: 12em;
+		}
+	}
 }
