@@ -4,122 +4,122 @@
  let cardArray = [{
     name: "Albania",
     img: "assets/images/flags/Albania.svg.png",
-    
+
 },
 {
     name: "Albania",
     img: "assets/images/flags/Albania.svg.png",
-    
+
 },
 {
     name: "Andorra",
     img: "assets/images/flags/Andorra.svg.png",
-    
+
 },
 {
     name: "Andorra",
     img: "assets/images/flags/Andorra.svg.png",
-    
+
 },
 {
     name: "Armenia",
     img: "assets/images/flags/Armenia.svg.png",
-    
+
 },
 {
     name: "Armenia",
     img: "assets/images/flags/Armenia.svg.png",
-    
+
 },
 {
     name: "Austria",
     img: "assets/images/flags/Austria.svg.png",
-    
+
 },
 {
     name: "Austria",
     img: "assets/images/flags/Austria.svg.png",
-    
+
 },
 {
     name: "Ireland",
     img: "assets/images/flags/Ireland.svg.png",
-    
+
 },
 {
     name: "Ireland",
     img: "assets/images/flags/Ireland.svg.png",
-    
+
 },
 {
     name: "Belarus",
     img: "assets/images/flags/Belarus.svg.png",
-    
+
 },
 {
     name: "Belarus",
     img: "assets/images/flags/Belarus.svg.png",
-   
+
 },
 {
     name: "Malta",
     img: "assets/images/flags/Malta.svg.png",
-    
+
 },
 {
     name: "Malta",
     img: "assets/images/flags/Malta.svg.png",
-   
+
 },
 {
     name: "Croatia",
     img: "assets/images/flags/Croatia.svg.png",
-   
+
 },
 {
     name: "Croatia",
     img: "assets/images/flags/Croatia.svg.png",
-    
+
 },
 {
     name: "Cyprus",
     img: "assets/images/flags/Cyprus.svg.png",
-    
+
 },
 {
     name: "Cyprus",
     img: "assets/images/flags/Cyprus.svg.png",
-    
+
 },
 {
     name: "France",
     img: "assets/images/flags/France.svg.png",
-    
+
 },
 {
     name: "France",
     img: "assets/images/flags/France.svg.png",
-   
+
 },
 {
     name: "Estonia",
     img: "assets/images/flags/Estonia.svg.png",
-   
+
 },
 {
     name: "Estonia",
     img: "assets/images/flags/Estonia.svg.png",
-   
+
 },
 {
     name: "Finland",
     img: "assets/images/flags/Finland.svg.png",
-    
+
 },
 {
     name: "Finland",
     img: "assets/images/flags/Finland.svg.png",
-    
+
 },
 ];
 
@@ -215,12 +215,12 @@ if (cardsWon.length === cardArray.length / 2) {
 }
 }
 /**
- * A victory function which add the visible class to displays an overlay text after the use has won the game.
- * The user can then click to restart the game and play again.
- * @param {} victory - Is called after all cards have been matched.
- */
+* A victory function which add the visible class to displays an overlay text after the use has won the game.
+* The user can then click to restart the game and play again.
+* @param {} victory - Is called after all cards have been matched.
+*/
 function victory() {
-    document.getElementById("victory-text").classList.add("visible");
+document.getElementById("victory-text").classList.add("visible");
 }
 
 /**
